@@ -1,0 +1,136 @@
+<div class="contact-heading mb-2">
+  <div class="container text-center p-2">
+    <h2 class="section-title mb-3">Let's Connect & Scale Your DSA Growth</h2>
+    <div class="section-description">
+      We’re here to help streamline your operations, increase your loan
+      conversions, and scale your DSA network with confidence. Send us a message
+      and let’s grow together.
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="row align-items-center rounded p-4 g-0">
+    <!-- Left Column: Image -->
+    <div class="col-md-6 d-none d-md-block">
+      <img
+        src="../../assets/images/contact.png"
+        alt="Contact Us"
+        class="img-fluid rounded-start"
+      />
+    </div>
+
+    <!-- Right Column: Form -->
+    <div class="col-md-6 p-4">
+      <form class="p-fluid needs-validation" novalidate>
+        <!-- Full Name -->
+        <div class="mb-3 position-relative">
+          <label for="name" class="form-label"
+            >Full Name <span class="text-danger">*</span></label
+          >
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-user"></i></span>
+            <input
+              id="name"
+              type="text"
+              pInputText
+              class="form-control rounded-end"
+              placeholder="John Doe"
+              required
+            />
+            <div class="invalid-feedback">Please enter your full name.</div>
+          </div>
+        </div>
+
+        <!-- Business Name -->
+        <div class="mb-3 position-relative">
+          <label for="businessName" class="form-label"
+            >Business Name <span class="text-danger">*</span></label
+          >
+          <div class="input-group">
+            <span class="input-group-text"
+              ><i class="fa fa-briefcase"></i
+            ></span>
+            <input
+              id="businessName"
+              type="text"
+              pInputText
+              class="form-control rounded-end"
+              placeholder="ABC Finance"
+              required
+            />
+            <div class="invalid-feedback">Please enter your business name.</div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3 position-relative">
+          <label for="email" class="form-label"
+            >Email <span class="text-danger">*</span></label
+          >
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+            <input
+              id="email"
+              type="email"
+              pInputText
+              class="form-control rounded-end"
+              placeholder="you@example.com"
+              required
+            />
+            <div class="invalid-feedback">
+              Please provide a valid email address.
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-3 position-relative">
+          <label for="phone" class="form-label"
+            >Phone Number <span class="text-danger">*</span></label
+          >
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+            <input
+              id="phone"
+              type="tel"
+              pInputText
+              class="form-control rounded-end"
+              placeholder="+91 9876543210"
+              pattern="^[0-9+\-\s]{10,15}$"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter a valid phone number.
+            </div>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="mb-3">
+          <label for="message" class="form-label"
+            >Message <span class="text-danger">*</span></label
+          >
+          <textarea
+            id="message"
+            rows="4"
+            pInputTextarea
+            class="form-control"
+            placeholder="Tell us how we can assist you"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please write your message.</div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-end">
+          <button
+            pButton
+            type="submit"
+            label="Submit"
+            class="btn btn-primary px-4 py-2 rounded-pill"
+          ></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

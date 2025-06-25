@@ -1,0 +1,19 @@
+<!-- <p-menubar [model]="items" class="custom-menubar">
+  <ng-template pTemplate="start" class="companyname">
+    <a class="logo" routerLink="/">LOAN CRM</a>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    <button
+      pButton
+      label="Book a Demo"
+      class="p-button-rounded p-button-info"
+    ></button>
+  </ng-template>
+</p-menubar> -->
+
+<app-navbar></app-navbar>
+<app-loading *ngIf="isLoading"></app-loading>
+<!-- <p>Router outlet below:</p> -->
+<router-outlet></router-outlet>
+<app-footer></app-footer>

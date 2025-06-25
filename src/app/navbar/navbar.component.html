@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <div class="container-fluid">
+    <!-- Logo on the left -->
+    <div class="d-flex align-items-center" style="margin: 10px">
+      <a [routerLink]="['/home']">
+        <img
+          src="../../assets/images/logo.svg"
+          alt="LOAN CRM"
+          style="height: 40px; width: auto"
+        />
+      </a>
+    </div>
+
+    <!-- Toggler for small screens -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Center and right-aligned content -->
+    <div
+      class="collapse navbar-collapse justify-content-between"
+      id="navbarSupportedContent"
+    >
+      <!-- Centered nav links -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/home']"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/about']"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/features']"
+            >Features</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/contact']"
+            routerLinkActive="active"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <!-- Book a Demo button on the right -->
+      <div class="d-flex align-items-center">
+        <a class="nav-link" [routerLink]="['/user']">
+          <button class="btn btn-primary">Book a Demo</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

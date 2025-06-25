@@ -1,0 +1,70 @@
+<footer class="site-footer">
+  <!-- Newsletter Section at Top -->
+   <div class="newsletter-wrapper">
+    <div class="newsletter-box">
+      <input
+        type="email"
+        placeholder="Enter your email to get the latest news..."
+        [(ngModel)]="email"
+        class="newsletter-input"
+      />
+      <button (click)="subscribe()" class="newsletter-button">Subscribe</button>
+    </div>
+  </div>
+
+
+  <!-- Main Footer Content -->
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3 class="text-uppercase fw-bold mb-2">LOAN CRM</h3>
+        <p class="mb-3">
+          Empowering DSAs with smart, scalable CRM tools to streamline lead
+          management and boost growth.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/features">Features</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Our Products</h4>
+        <ul>
+          <li><a href="#">DSA CRM</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Contact Us</h4>
+        <div class="contact-info">
+          <p class="mb-1">
+            <i class="fas fa-phone-alt me-2 text-white"></i> +91 98765 43210
+          </p>
+          <p>
+            <i class="fas fa-envelope me-2 text-white"></i>
+            support&#64;loancrm.com
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2025 LOAN CRM. All rights reserved. |
+        <a href="#">Privacy Policy</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <button class="btn btn-primary">Schedule a Call</button>
+</div>
