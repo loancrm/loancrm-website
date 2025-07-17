@@ -1,103 +1,192 @@
-.about-heading {
-  padding-top: 95px;
+/* === Feature Map Section === */
+.feature-map-section {
+  background: linear-gradient(to bottom, #29415B, #578AC1);
+  position: relative;
+  height: 700px;
+  overflow: hidden;
 }
 
-.about-section {
-  // background: #f5f8fb;
-  // padding: 60px 20px;
-  border-radius: 10px;
+/* === Feature Banner Image === */
+.feature-map-img {
+ 
+  width: 100%;
+}
+
+/* === Common Box Styling === */
+.feature-box {
+  position: absolute;
+  width: 100px;
   text-align: center;
-
-  color: #2c3e50;
+  font-size: 14px;
+  z-index: 10;
 }
 
-.section-title {
-  font-size: 36px;
-  font-weight: 700;
-
-  color: #1d2d44 !important;
+.feature-box .box-content {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
 }
 
-.section-description {
-  font-size: 18px;
-
-  max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  color: #4a6fa5;
-}
-.section-description strong {
-  color: #3358f4;
+.box-content > i {
+  color: #ee7846;
 }
 
-.section-heading {
-  font-size: 24px;
-  margin-bottom: 30px;
+.text-orange {
+  color: #ee7846;
+  font-size: 20px;
+}
+// .icon-top{
+//   position: relative;
+// }
+// .icon-circle {
+//   position: relative;
+//   top:-80%;
+//   left:-50%;
+//   width: 60px;
+//   height: 60px;
+//   background-color: #e3dedb; /* Example: orange */
+//   border-radius: 10%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+// }
+
+/* Position wrapper relative to allow absolute positioning of icon */
+.service-box {
+  position: relative;
+}
+
+.icon-wrap {
+  position: absolute;
+  top: -5px; /* pushes icon above the box */
+  left: 30px; /* centers it horizontally relative to the box's left */
+  z-index: 2;
+}
+
+.icon-circle {
+  width: 55px;
+  height: 55px;
+  background-color: #ffffff;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  color: #2c3e50;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
+
+/* === Line Styling for Desktop === */
+@media (min-width: 1024px) {
+  .line {
+    width: 2px;
+    background-color: #ee7846;
+    position: absolute;
+  }
+
+  .line-leads {
+    height: 250px;
+    transform: rotate(110deg);
+  }
+
+  .line-lenders {
+    height: 170px;
+    transform: rotate(135deg);
+  }
+
+  .line-sanctions {
+    height: 180px;
+    transform: rotate(35deg);
+  }
+
+  .line-callbacks {
+    height: 200px;
+    transform: rotate(45deg);
+  }
+
+  .line-top-left {
+    top: -50%;
+    right: -90%;
+  }
+
+  .line-top-right {
+    top: 55%;
+    left: 60%;
+    margin: 5px;
+  }
+
+  .line-bottom-left {
+    top: 35%;
+    right: -20%;
+  }
+
+  .line-bottom-right {
+    top: 42%;
+    left: 30%;
+  }
+
+  /* === Box Positions for Desktop === */
+  .box-top-left {
+    top: 45%;
+    left: 8%;
+  }
+
+  .box-top-right {
+    top: 25%;
+    right: 40%;
+  }
+
+  .box-bottom-left {
+    top: 100%;
+    left: 15%;
+  }
+
+  .box-bottom-right {
+    bottom: 1%;
+    right: 17%;
+  }
 }
 
-.feature-card h4 {
-  font-weight: 600;
-  margin-bottom: 5px;
+/* === Mobile View: Hide All Except Image === */
+@media (max-width: 767.98px) {
+  .feature-box,
+  .line {
+    display: none !important;
+  }
+
+  .feature-map-img {
+    max-width: 90%;
+    margin: 30px auto;
+    display: block;
+    position: relative;
+    top: 78px;
+  }
+
+  .feature-map-section {
+    height: auto;
+    padding-bottom: 40px;
+  }
 }
 
-.feature-card p {
-  color: #555;
-  font-size: 16px !important;
+/* === Optional Small Device Tweaks === */
+@media (max-width: 575.98px) {
+  .text-orange {
+    font-size: 16px;
+  }
+   .icon-wrap {
+    left: 15px;
+    top: 0px;
+    transform: scale(0.9);
+  }
+  .icon-circle{
+    width:50px;
+    height:50px
+  }
+   .service-box {
+    margin-bottom: 1.5rem; /* or use 2rem for more spacing */
+  }
 }
 
-.icon-box {
-  min-width: 40px;
-}
 
-// .feature-card:hover {
-//   transform: translateY(-5px);
-//   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-// }
-
-.icon-box {
-  font-size: 15px;
-  color: #1d8cf8;
-  background: #eaf4ff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // margin: 0 auto 20px;
-  transition: background 0.4s, transform 0.4s;
-}
-
-// .feature-card:hover .icon-box {
-//   background: #1d8cf8;
-//   color: #fff;
-//   transform: scale(1.1);
-// }
-
-.feature-card h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #34495e;
-}
-
-.feature-card p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
-}
-.about-heading {
-  background-color: #eaf4ff;
-}

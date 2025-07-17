@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router'; // ✅ IMPORT ROUTER
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -7,9 +8,12 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
- items: MenuItem[] | undefined;
-
+  items: MenuItem[] | undefined;
   activeItem: MenuItem | undefined;
+
+  @ViewChild('navbarCollapse') navbarCollapse!: ElementRef;  // ✅ DECLARE ViewChild correctly
+
+  constructor(private router: Router) {}  // ✅ INJECT Router here
 
   ngOnInit() {
     this.items = [
@@ -27,6 +31,16 @@ export class NavbarComponent {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // ✅ This function closes the Bootstrap menu on mobile and navigates
+  onNavItemClick(path: string): void {
+    this.router.navigate([path]);
+
+    const navbar = this.navbarCollapse?.nativeElement;
+    if (navbar && navbar.classList.contains('show')) {
+      navbar.classList.remove('show');
     }
   }
 }

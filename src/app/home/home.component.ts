@@ -8,11 +8,17 @@ import { MenuItem } from 'primeng/api';
 })
 export class HomeComponent {
   activeTab = 'crm';
-  loanTypes: string[] = ['Personal Loans', 'Business Loans', 'Home Loans', 'LAP', 'Education Loans'];
+  loanTypes: string[] = ['Personal Loan', 'Business Loan', 'Home Loan', 'Education Loan', 'Vehicle Loan', 'Mortgage Loan'];
   displayedText = '';
   currentWordIndex = 0;
   charIndex = 0;
   isDeleting = false;
+  features = [
+    { title: 'Best Price', subtitle: 'Cost effective for Consultants' },
+    { title: 'Flexible Subscription', subtitle: 'No lock-in and price hikes' },
+    { title: 'Ease of Use', subtitle: 'Easy understandable UI' },
+    { title: 'Easy Adoption', subtitle: 'Onboarding, Multiple Trainings' }
+  ];
 
   typingSpeed = 150;
   deletingSpeed = 50;
@@ -29,8 +35,8 @@ export class HomeComponent {
   title = "wintech"
   faqs = [
     {
-      question: 'What is a Loan CRM and how does it help my business?',
-      answer: 'A Loan CRM (Customer Relationship Management) software helps you streamline the entire loan lifecycle—from capturing leads and managing applications to tracking disbursements and automating follow-ups. It ensures efficiency, compliance, and better customer experience.',
+      question: 'Can I get a demo of Loan CRM?',
+      answer: "Of course! Just connect with our technical expert on the contact details mentioned at the bottom of the page and get a demo scheduled. Get a detailed explanation of the software and its features. Don't hesitate to ask questions!",
       open: false
     },
     {
@@ -54,7 +60,7 @@ export class HomeComponent {
       open: false
     },
 
-  {
+    {
       question: 'How does the CRM help with compliance and audit readiness?',
       answer: 'The system keeps detailed logs of every interaction, stores necessary documents securely, and provides audit trails to ensure you meet regulatory requirements and can respond to compliance checks efficiently.',
       open: false
@@ -65,41 +71,99 @@ export class HomeComponent {
   isYearly = false;
 
   pricingPlans = [
+    // {
+    //   name: 'Freelancer',
+    //   icon: 'fas fa-layer-group',
+    //   badgeClass: 'basic-badge',
+    //   monthly: 25,
+    //   yearly: 9999,
+    //   features: [
+    //    'Up to 1000 Leads',
+    //     'Basic Lead Management',
+    //     'Customer KYC Upload',
+    //     'Single User Access',
+    //     'Basic Reporting',
+    //     'Email Notifications'
+    //   ]
+    // },
     {
       name: 'Basic',
       icon: 'fas fa-layer-group',
-      badgeClass: 'basic-badge',
+      badgeClass: 'premium-badge',
       monthly: 999,
-      yearly: 9999,
+      yearly: 9990,
       features: [
-        'Up to 1000 Leads',
-        'Basic Lead Management',
-        'Customer KYC Upload',
-        'Single User Access',
-        'Basic Reporting',
-        'Email Notifications'
+        'Lead Capture & Assignment',
+        'Loan Application Tracking',
+        'Basic Workflow Automation',
+        'Basic Reports',
+        'Role-based Access Control'
       ]
     },
     {
       name: 'Professional',
       icon: 'fas fa-star',
       badgeClass: 'premium-badge',
-      monthly: 1999,
-      yearly: 19999,
+      monthly: 1499,
+      yearly: 14990,
       features: [
-        'Up to 5000 Leads',
-        'Multi-User Support (5 Users)',
-        'Workflow Automation',
-        'Document Collection & Tracking',
+
+        'Lead Capture & Assignment',
         'Loan Application Tracking',
-        'Integration with Email & SMS'
+        'Basic Workflow Automation',
+        'Basic Reports',
+        'Role-based Access Control',
+        'Integration with Email & SMS',
+        'Own Branding'
       ]
-    },
+    }
 
   ];
 
 
-
+  images: string[] = [
+    'assets/images/clients/hdfc.png',
+    'assets/images/clients/scb.png',
+    'assets/images/clients/icici.png',
+    'assets/images/clients/kotak.png',
+    'assets/images/clients/axis.png',
+    'assets/images/clients/yes.png',
+    'assets/images/clients/bajaj.png',
+    'assets/images/clients/smfg.png',
+    'assets/images/clients/ugro.png',
+    'assets/images/clients/aditya.png',
+    'assets/images/clients/idfc.png',
+    'assets/images/clients/indus.png',
+    'assets/images/clients/tata.png',
+    'assets/images/clients/muthoot.png',
+    'assets/images/clients/lending.png',
+    'assets/images/clients/neo.png',
+    'assets/images/clients/edel.png',
+    'assets/images/clients/clix.png',
+    // 'assets/images/clients/indi.png',
+    'assets/images/clients/hero.png',
+    'assets/images/clients/poona.png',
+    // 'assets/images/clients/ftcash.png',
+    'assets/images/clients/arka.png',
+    'assets/images/clients/bandhan.png',
+    'assets/images/clients/mas.png',
+    'assets/images/clients/chola.png',
+    'assets/images/clients/fed.png',
+    'assets/images/clients/finplex.png',
+    'assets/images/clients/godrej.png',
+    'assets/images/clients/protium.png',
+    'assets/images/clients/iifl.png',
+    'assets/images/clients/mahindra.png',
+    'assets/images/clients/indifi.png',
+    'assets/images/clients/kinara.png',
+    'assets/images/clients/karur.png',
+    'assets/images/clients/lt.png',
+    'assets/images/clients/unity.png',
+    'assets/images/clients/piramal.png',
+    'assets/images/clients/shriram.png',
+    'assets/images/clients/credit.png'
+  ];
+  numVisibleItems: number = 6;
 
   workflowSteps = [
     { icon: 'fas fa-bullseye', title: 'Lead Capturing', description: 'Capture leads from multiple channels automatically.' },
@@ -121,11 +185,30 @@ export class HomeComponent {
 
 
     ];
+    this.setVisibleItems(window.innerWidth);
+
+    window.addEventListener('resize', () => {
+      this.setVisibleItems(window.innerWidth);
+    });
+
   }
 
 
   togglePricing(yearly: boolean) {
     this.isYearly = yearly;
+  }
+  setVisibleItems(width: number): void {
+    if (width < 576) {
+      this.numVisibleItems = 2; // extra small
+    } else if (width < 768) {
+      this.numVisibleItems = 2; // small
+    } else if (width < 992) {
+      this.numVisibleItems = 3; // medium
+    } else if (width < 1200) {
+      this.numVisibleItems = 4; // large
+    } else {
+      this.numVisibleItems = 6; // extra large
+    }
   }
   // Toggle the mobile menu visibility
   toggleMobileMenu(): void {
@@ -144,6 +227,10 @@ export class HomeComponent {
   trackByFn(index: number, item: any) {
     return index;
   }
+  goToLogin() {
+    window.location.href = 'https://app.loancrm.org/#/user/register';
+  }
+
   typeEffect() {
     const currentWord = this.loanTypes[this.currentWordIndex];
 

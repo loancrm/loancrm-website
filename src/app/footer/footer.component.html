@@ -1,5 +1,5 @@
-<footer class="site-footer">
-  <!-- Newsletter Section at Top -->
+<!-- <footer class="site-footer">
+
    <div class="newsletter-wrapper">
     <div class="newsletter-box">
       <input
@@ -12,6 +12,116 @@
     </div>
   </div>
 
+
+
+  <div class="container">
+    <div class="footer-grid">
+       <div class="footer-links">
+        <h4>Column one</h4>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/features">Features</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Column Two</h4>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/features">Features</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Column Three</h4>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/features">Features</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+<div class="footer-social">
+  <h4>Contact Us</h4>
+
+
+  <div class="app-downloads">
+
+<a href="#" target="_blank">
+  <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+       alt="Download on the App Store"
+       style="height: 40px;margin:2px" />
+</a>
+
+
+
+  <div class="me-2">
+    <a href="#" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+       alt="Get it on Google Play"
+       style="height: 40px;margin:2px" />
+</a>
+
+  </div>
+
+  </div>
+
+  <div class="join-us mt-3">
+    <p><strong>Join us</strong></p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-youtube text-white"></i></a>
+      <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+      <a href="#"><i class="fab fa-twitter text-white"></i></a>
+      <a href="#"><i class="fab fa-instagram text-white"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+    </div>
+  </div>
+</div>
+
+    </div>
+<hr class="footer-divider" />
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+           <p>
+       LOAN CRM &copy; 2025 . All rights reserved.
+
+      </p>
+      </div>
+       <div class="footer-bottom-right">
+          <p>
+           Eleven
+          </p>
+          <p>Twelve</p>
+          <p>Thirteen </p>
+       </div>
+
+    </div>
+  </div>
+</footer>
+
+
+<div class="sticky-cta">
+  <button class="btn btn-primary">Schedule a Call</button>
+</div> -->
+
+<footer class="site-footer">
+  <!-- Newsletter Section at Top -->
+  <div class="newsletter-wrapper">
+    <div class="newsletter-box">
+      <input
+        type="email"
+        placeholder="Enter your email to get the latest news..."
+        [(ngModel)]="email"
+        class="newsletter-input"
+      />
+      <button (click)="subscribe()" class="newsletter-button">Subscribe</button>
+    </div>
+  </div>
 
   <!-- Main Footer Content -->
   <div class="container">
@@ -35,9 +145,9 @@
       </div>
 
       <div class="footer-links">
-        <h4>Our Products</h4>
+        <h4>Legal</h4>
         <ul>
-          <li><a href="#">DSA CRM</a></li>
+          <li><a routerLink="/terms-of-service">Terms & Conditions</a></li>
         </ul>
       </div>
 
@@ -45,21 +155,32 @@
         <h4>Contact Us</h4>
         <div class="contact-info">
           <p class="mb-1">
-            <i class="fas fa-phone-alt me-2 text-white"></i> +91 98765 43210
+            <i class="fas fa-phone-alt me-2 text-white"></i> +91 81792 78882
           </p>
           <p>
             <i class="fas fa-envelope me-2 text-white"></i>
-            support&#64;loancrm.com
+            teamloancrm&#64;gmail.com
           </p>
         </div>
       </div>
     </div>
-
-    <div class="footer-bottom">
+    <hr class="footer-divider" />
+    <!-- <div class="footer-bottom">
       <p>
         &copy; 2025 LOAN CRM. All rights reserved. |
         <a href="#">Privacy Policy</a>
       </p>
+    </div> -->
+
+    <div class="footer-bottom">
+      <div class="d-flex justify-content-between align-items-center">
+        <p>LOAN CRM &copy; 2025 . All rights reserved.</p>
+      </div>
+      <!-- <div class="footer-bottom-right">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div> -->
     </div>
   </div>
 </footer>

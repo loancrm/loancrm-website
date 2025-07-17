@@ -35,6 +35,6 @@ export class AppComponent implements OnInit {
     this.loaderService.show();
     setTimeout(() => {
       this.loaderService.hide();
-    }, 3000); // hide after 3 seconds
+    }, 2000); // hide after 3 seconds
   }
 }

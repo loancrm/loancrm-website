@@ -1,101 +1,98 @@
+<!-- Heading Section -->
 <div class="contact-heading mb-2">
   <div class="container text-center p-2">
-    <h2 class="section-title mb-3">Let's Connect & Scale Your DSA Growth</h2>
-    <div class="section-description">
-      We’re here to help streamline your operations, increase your loan
-      conversions, and scale your DSA network with confidence. Send us a message
-      and let’s grow together.
-    </div>
+    <h1 class="text-orange contact-text fw-bold">Contact Us</h1>
+    <p>Any question or remarks? Just write us a message!</p>
   </div>
 </div>
-<div class="container my-5">
-  <div class="row align-items-center rounded p-4 g-0">
-    <!-- Left Column: Image -->
-    <div class="col-md-6 d-none d-md-block">
-      <img
-        src="../../assets/images/contact.png"
-        alt="Contact Us"
-        class="img-fluid rounded-start"
-      />
+
+<!-- Contact Form Section -->
+<div
+  class="container mb-5 my-2 py-3 border border-black rounded-4 overflow-hidden"
+>
+  <div class="row g-0 flex-column flex-md-row pt-3 contact-form">
+    <!-- Left Column: Contact Info with Image Background -->
+    <div
+      class="col-12 col-md-6 contact-info-container text-white p-4 p-md-5 rounded-2"
+    >
+      <div
+        class="d-flex flex-column justify-content-between h-100 position-relative"
+      >
+        <div class="overlay mt-3"></div>
+        <!-- Top Text -->
+        <div class="content-top px-2 px-md-3 mb-4 mt-3 d-none d-md-block">
+          <h2>Contact Information</h2>
+          <p>Say something to start a live chat!</p>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details py-0 mb-0 rounded-4 mt-md-0 mt-10">
+          <div class="mb-3 d-flex align-items-start m-2 m-md-3 p-2 p-md-3">
+            <i class="fa fa-phone me-3 mt-1 fs-4"></i>
+            <p class="mb-0 fs-5 px-2">+91 81792 78882</p>
+          </div>
+
+          <div class="mb-3 d-flex align-items-start m-2 m-md-3 p-2 p-md-3">
+            <i class="fa fa-envelope me-3 mt-1 fs-4"></i>
+            <p class="mb-0 fs-5 px-2">teamloancrm&#64;gmail.com</p>
+          </div>
+
+          <!-- <div class="d-flex align-items-start m-2 m-md-3 p-2 p-md-3">
+            <i class="fa fa-map-marker-alt me-3 mt-1 fs-4"></i>
+            <p class="mb-0 fs-5 px-md-2 px-1">
+              Hyderabad,
+              Telangana
+            </p>
+          </div> -->
+        </div>
+      </div>
     </div>
 
     <!-- Right Column: Form -->
-    <div class="col-md-6 p-4">
-      <form class="p-fluid needs-validation" novalidate>
-        <!-- Full Name -->
-        <div class="mb-3 position-relative">
-          <label for="name" class="form-label"
-            >Full Name <span class="text-danger">*</span></label
-          >
-          <div class="input-group">
-            <span class="input-group-text"><i class="fa fa-user"></i></span>
+    <div class="col-12 col-md-6 p-4 mt-5 right-contact-form">
+      <form class="needs-validation right-contact" novalidate>
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <label for="firstName" class="form-label">First Name</label>
             <input
-              id="name"
+              id="firstName"
               type="text"
-              pInputText
-              class="form-control rounded-end"
-              placeholder="John Doe"
+              class="form-control border-bottom-only"
               required
             />
-            <div class="invalid-feedback">Please enter your full name.</div>
+            <div class="invalid-feedback">Please enter your first name.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input
+              id="lastName"
+              type="text"
+              class="form-control border-bottom-only"
+              required
+            />
+            <div class="invalid-feedback">Please enter your last name.</div>
           </div>
         </div>
 
-        <!-- Business Name -->
-        <div class="mb-3 position-relative">
-          <label for="businessName" class="form-label"
-            >Business Name <span class="text-danger">*</span></label
-          >
-          <div class="input-group">
-            <span class="input-group-text"
-              ><i class="fa fa-briefcase"></i
-            ></span>
-            <input
-              id="businessName"
-              type="text"
-              pInputText
-              class="form-control rounded-end"
-              placeholder="ABC Finance"
-              required
-            />
-            <div class="invalid-feedback">Please enter your business name.</div>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="mb-3 position-relative">
-          <label for="email" class="form-label"
-            >Email <span class="text-danger">*</span></label
-          >
-          <div class="input-group">
-            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+        <div class="row mb-3">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <label for="email" class="form-label">Email</label>
             <input
               id="email"
               type="email"
-              pInputText
-              class="form-control rounded-end"
-              placeholder="you@example.com"
+              class="form-control border-bottom-only"
               required
             />
             <div class="invalid-feedback">
               Please provide a valid email address.
             </div>
           </div>
-        </div>
-
-        <!-- Phone -->
-        <div class="mb-3 position-relative">
-          <label for="phone" class="form-label"
-            >Phone Number <span class="text-danger">*</span></label
-          >
-          <div class="input-group">
-            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone Number</label>
             <input
               id="phone"
               type="tel"
-              pInputText
-              class="form-control rounded-end"
-              placeholder="+91 9876543210"
+              class="form-control border-bottom-only"
               pattern="^[0-9+\-\s]{10,15}$"
               required
             />
@@ -105,30 +102,21 @@
           </div>
         </div>
 
-        <!-- Message -->
         <div class="mb-3">
-          <label for="message" class="form-label"
-            >Message <span class="text-danger">*</span></label
-          >
+          <label for="message" class="form-label">Message</label>
           <textarea
             id="message"
-            rows="4"
-            pInputTextarea
-            class="form-control"
-            placeholder="Tell us how we can assist you"
+            rows="2"
+            class="form-control border-bottom-only"
             required
           ></textarea>
           <div class="invalid-feedback">Please write your message.</div>
         </div>
 
-        <!-- Submit Button -->
-        <div class="text-end">
-          <button
-            pButton
-            type="submit"
-            label="Submit"
-            class="btn btn-primary px-4 py-2 rounded-pill"
-          ></button>
+        <div class="text-left mt-4">
+          <button type="submit" class="btn btn-orange px-4 py-2">
+            Send Message
+          </button>
         </div>
       </form>
     </div>

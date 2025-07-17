@@ -1,207 +1,169 @@
-<div class="container-fluid">
-  <div class="row vh-100 bg-gradient">
-    <!-- Left Side -->
-
-    <!-- Right Side -->
-    <div class="col-md-6 d-flex align-items-center text-white p-5">
-      <div>
-        <p class="text-white">ALL LOANS IN YOUR POCKET</p>
-        <h1 class="fw-bold text-orange">
-          CRM Software for Loan DSA Community
-          <!-- <span>{{ displayedText }}</span> -->
+<div class="homebanner">
+  <!-- <div class="container">
+    <div class="row banner-container">
+      <div class="col-md-7 d-flex flex-column text-white col-12">
+        <div>
+          A L L &nbsp; L O A N S &nbsp; I N &nbsp; Y O U R &nbsp; P O C K E T
+        </div>
+        <h1 class="fw-bold text-white text-font-size">
+          <span class="text-nowrap">Loan DSA CRM Software </span>
+          <br />
+          <span class="text-white text-nowrap">for {{ displayedText }}</span>
+          <span class="home-banner-inner-text">Personal Loan</span>
         </h1>
-        <h5 class="mt-3 mb-4">
+        <p class="mt-3 mb-4 text-line-height">
           Streamline processes, close deals faster, and grow your business
           effortlessly with our smart CRM platform.
-        </h5>
-        <div class="d-flex gap-3">
-          <button class="btn btn-orange rounded-5 p-3">Book Demo</button>
-          <button class="btn btn-outline-orange rounded-5">
-            30 Days Free Trial
+        </p>
+        <ul class="mt-3 mb-4 text-line-height text-orange text-nowrap">
+          <li>Expand your loan offerings</li>
+          <li>Manage your clients through an automated platform</li>
+          <li>Communicate easily with clients and lenders</li>
+        </ul>
+        <div class="d-flex gap-4 flex-wrap">
+
+          <button class="btn btn-orange rounded-5 btn-book-demo">
+            Book Demo
           </button>
+
+       <button class="btn rounded-5 px-2 btn-explore" (click)="goToLogin()">
+  30 Days Free Trial
+</button>
+
         </div>
-        <!-- <p class="text-white mt-2">30 Days Free Trail</p> -->
       </div>
     </div>
+  </div> -->
+  <div class="min-vh-100 d-flex align-items-center">
+    <div class="container bannertext">
+      <div class="row align-items-center">
+        <div
+          class="col-12 col-md-7 d-flex flex-column justify-content-center h-100 text-white"
+        >
+          <div class="mb-2 text-uppercase letter-spacing">
+            A L L &nbsp; L O A N S &nbsp; I N &nbsp; Y O U R &nbsp; P O C K E T
+          </div>
 
-    <div class="col-md-6 d-flex justify-content-center align-items-center p-0">
-      <div class="text-center">
-        <div class="">
-          <img src="../../assets/images/hero.svg" class="img-fluid" />
+          <h1 class="fw-bold text-white text-font-size">
+            <span class="d-block text-nowrap">Loan DSA CRM Software</span>
+            <span class="d-block text-nowrap">for {{ displayedText }}</span>
+          </h1>
+
+          <ul class="mt-3 mb-4 text-line-height text-orange ps-3">
+            <li class="mb-1">Expand your loan offerings</li>
+            <li class="mb-1">
+              Manage your clients through an automated platform
+            </li>
+            <li class="mb-1">Communicate easily with clients and lenders</li>
+          </ul>
+
+          <div class="d-flex flex-nowrap gap-3">
+            <button class="btn btn-orange rounded-5 py-2 px-4">
+              Book Demo
+            </button>
+            <button
+              class="btn btn-light rounded-5 px-4 py-2 btn-explore"
+              (click)="goToLogin()"
+            >
+              30 Days Free Trial
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bottom Section -->
-  <div
-    class="container bg-white py-4 px-3 shadow-lg bottom-values d-flex flex-column flex-md-row justify-content-around align-items-center text-center about-section"
-  >
-    <div class="px-3 mb-3 mb-md-0">
-      <strong>Our Values</strong>
-      <p class="mb-0">
-        Customer-Centricity, Innovation, Integrity, Collaboration, and a Growth
-        Mindset guide everything we do.
-      </p>
-    </div>
-    <div class="px-3 mb-3 mb-md-0">
-      <strong>Our Mission</strong>
-      <p class="mb-0">
-        We provide hassle-free loan management to help the Loan DSA community
-        grow in a positive and successful environment.
-      </p>
-    </div>
-    <div class="px-3">
-      <strong>Our Vision</strong>
-      <p class="mb-0">
-        We aim to deliver top-quality loan management solutions to DSAs,
-        Connectors, Agents, and Freelancers, ensuring their complete
-        satisfaction.
-      </p>
+  <div class="bg-white shadow-sm about-section">
+    <div
+      class="about-section-inner d-flex flex-column flex-md-row justify-content-around align-items-center text-center"
+    >
+      <div class="about-section-inner-box mt-2 mt-md-0">
+        <strong>Our Values</strong>
+        <p class="about-para p-2">
+          Customer-Centricity, Innovation, Integrity, Collaboration, and a
+          Growth Mindset guide everything we do.
+        </p>
+      </div>
+      <div class="about-section-inner-box mt-2 mt-md-0">
+        <strong>Our Mission</strong>
+        <p class="about-para p-2">
+          We provide hassle-free loan management to help the Loan DSA community
+          grow in a positive and successful environment.
+        </p>
+      </div>
+      <div class="about-section-inner-box mt-2 mt-md-0">
+        <strong>Our Vision</strong>
+        <p class="about-para p-2">
+          We aim to deliver top-quality loan management solutions to DSAs,
+          Connectors, Agents, and Freelancers, ensuring their complete
+          satisfaction.
+        </p>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- <section class="hero hero-image-right">
-  <div class="hero-content">
-    <div class="hero-image">
-
-      <img src="../assets/images/hero.png" class="" />
-    </div>
-    <div class="hero-text">
-      <h1>
-        Loan DSA CRM Software <br />
-        for <span>{{ displayedText }}</span>
-      </h1>
-      <p>
-        Streamline processes, close deals faster, and grow your business
-        effortlessly with our smart CRM platform.
-      </p>
-      <button class="btn btn-primary">Get Free Trial</button>
-    </div>
+<!-- <section
+  data-aos="zoom-in"
+  data-aos-duration="1500"
+  class="section-bg carouselitems"
+>
+  <div class="carousel-container mx-2">
+    <p-carousel
+      [value]="images"
+      [numVisible]="numVisibleItems"
+      [circular]="true"
+      [autoplayInterval]="3000"
+      [numScroll]="1"
+      [showIndicators]="false"
+      [showNavigators]="true"
+      styleClass="custom-carousel"
+    >
+      <ng-template let-image pTemplate="item">
+        <img [src]="image" class="imageicon grayscale-hover" />
+      </ng-template>
+    </p-carousel>
   </div>
 </section> -->
-
-<!-- <section class="my-section text-center">
-  <img
-    src="../../assets/images/process.gif"
-    alt="Loan CRM Demo"
-    class="img-fluid"
-  />
-</section> -->
-
-<!--
-<section class="products-tabs-cards">
-  <div class="container">
-    <h2 class="section-title">Explore Our Solutions</h2>
-    <div class="tab-cards">
-      <div
-        class="tab-card"
-        [class.active]="activeTab === 'crm'"
-        (click)="activeTab = 'crm'"
-      >
-        <i class="fas fa-briefcase fa-3x icon-box"></i>
-        <h3>Business Loan DSA CRM</h3>
-      </div>
-      <div
-        class="tab-card"
-        [class.active]="activeTab === 'hrm'"
-        (click)="activeTab = 'hrm'"
-      >
-        <i class="fas fa-users fa-3x icon-box"></i>
-        <h3>Human Resource Management</h3>
-      </div>
-      <div
-        class="tab-card"
-        [class.active]="activeTab === 'real-estate-crm'"
-        (click)="activeTab = 'real-estate-crm'"
-      >
-        <i class="fas fa-building fa-3x icon-box"></i>
-        <h3>Real Estate CRM</h3>
-      </div>
-    </div>
-
-    <div class="tab-content-card" *ngIf="activeTab === 'crm'">
-      <div class="content-card">
-        <i class="fas fa-briefcase fa-4x icon-box"></i>
-        <div>
-          <h4>Business Loan DSA CRM</h4>
-          <p>
-            Track leads, manage DSAs, automate commissions, and scale your loan
-            business.
-          </p>
+<section
+  data-aos="zoom-in"
+  data-aos-duration="1500"
+  class="section-bg carouselitems"
+>
+  <div class="carousel-container mx-2">
+    <p-carousel
+      [value]="images"
+      [numVisible]="numVisibleItems"
+      [circular]="true"
+      [autoplayInterval]="3000"
+      [numScroll]="1"
+      [showIndicators]="false"
+      [showNavigators]="true"
+      styleClass="custom-carousel"
+    >
+      <ng-template let-image pTemplate="item">
+        <div class="carousel-item-wrapper">
+          <img [src]="image" class="imageicon grayscale-hover" />
         </div>
-      </div>
-    </div>
-
-    <div class="tab-content-card" *ngIf="activeTab === 'hrm'">
-      <div class="content-card">
-        <i class="fas fa-users fa-4x icon-box"></i>
-        <div>
-          <h4>Human Resource Management</h4>
-          <p>
-            From onboarding to payroll and compliance, HRM makes your workforce
-            management seamless.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="tab-content-card" *ngIf="activeTab === 'real-estate-crm'">
-      <div class="content-card">
-        <i class="fas fa-building fa-4x icon-box"></i>
-        <div>
-          <h4>Real Estate CRM</h4>
-          <p>
-            Manage property listings, track client inquiries, automate sales
-            processes, and simplify the real estate business workflow.
-          </p>
-        </div>
-      </div>
-    </div>
+      </ng-template>
+    </p-carousel>
   </div>
-</section> -->
+</section>
 
-<!-- <section class="how-it-works py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title text-center mb-5 fw-bold display-6">
-      How It Works
-    </h2>
-    <div class="row">
-      <div
-        class="col-md-4 mb-4"
-        *ngFor="let step of workflowSteps; let i = index"
-      >
-        <div
-          class="card h-100 shadow-sm border-0 text-center how-it-works-card"
-        >
-          <div class="card-body d-flex flex-column justify-content-between">
-            <div>
-              <div class="icon-wrapper mb-3">
-                <i [class]="step.icon"></i>
-              </div>
-              <h5 class="card-title fw-semibold mb-2">{{ step.title }}</h5>
-              <p class="card-text text-muted">{{ step.description }}</p>
-            </div>
-            <span class="badge step-badge">Step {{ i + 1 }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<div class="container my-5">
-  <div class="row align-items-center">
-    <!-- Left Content Section -->
-    <div class="col-md-7">
-      <h3 class="text-orange fw-bold mb-4">Loan Process</h3>
 
-      <div class="row g-3">
-        <!-- Card 1 -->
-        <div class="col-md-6">
-          <div class="process-card p-3 h-100">
+<div class="loan-process-section mt-3">
+  <h1 class="text-orange text-md-center fw-bold mb-4 text-md-start text-center">
+    DSA Success Path
+  </h1>
+
+  <!-- <div class="row loan-process">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-5 col-6 m-md-1">
+          <div class="process-card p-3 text-center text-md-start">
             <div class="icon mb-2">
-              <i class="pi pi-calendar text-orange fs-4"></i>
+              <i class="pi pi-user-plus fs-4 text-orange"></i>
             </div>
             <h5 class="fw-semibold mb-2">Lead Capture</h5>
             <p class="mb-0">
@@ -210,33 +172,30 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="col-md-6">
-          <div class="process-card p-3 h-100">
+        <div class="col-md-5 col-6 my-2 m-md-1">
+          <div class="process-card p-3 text-center text-md-start">
             <div class="icon mb-2">
-              <i class="pi pi-send text-orange fs-4"></i>
+              <i class="pi pi-folder fs-4 text-orange"></i>
             </div>
             <h5 class="fw-semibold mb-2">Document Collection</h5>
             <p class="mb-0">Gather and manage borrower documents securely.</p>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="col-md-3">
-          <div class="process-card p-3 h-100">
+        <div class="col-md-3 col-6 my-2 m-md-1">
+          <div class="process-card p-3 text-center text-md-start">
             <div class="icon mb-2">
-              <i class="pi pi-heartbeat text-orange fs-4"></i>
+              <i class="pi pi-check-circle fs-4 text-orange"></i>
             </div>
             <h5 class="fw-semibold mb-2">Credit Evaluation</h5>
             <p class="mb-0">Fetch and evaluate credit reports instantly.</p>
           </div>
         </div>
 
-        <!-- Card 4 -->
-        <div class="col-md-3">
-          <div class="process-card p-3 h-100">
+        <div class="col-md-3 col-6 my-2 m-md-1">
+          <div class="process-card p-3 text-center text-md-start">
             <div class="icon mb-2">
-              <i class="pi pi-car text-orange fs-4"></i>
+              <i class="pi pi-link fs-4 text-orange"></i>
             </div>
             <h5 class="fw-semibold mb-2">Lender Matching</h5>
             <p class="mb-0">
@@ -245,11 +204,91 @@
           </div>
         </div>
 
-        <!-- Card 5 -->
-        <div class="col-md-3">
-          <div class="process-card p-3 h-100">
+        <div class="col-md-3 col-6 my-2 m-md-1">
+          <div class="process-card p-3 text-center text-md-start">
             <div class="icon mb-2">
-              <i class="pi pi-money-bill text-orange fs-4"></i>
+              <i class="pi pi-percentage fs-6 text-orange"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">Disbursal & Commission</h5>
+            <p class="mb-0">
+              Track final disbursals and automate commission payouts.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center col-5">
+          <img
+            src="../../assets/images/process.png"
+            alt="Woman on phone"
+            class="img-fluid mobile-only-img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <img
+        src="../../assets/images/process.png"
+        alt="Woman on phone"
+        class="img-fluid"
+      />
+    </div>
+  </div> -->
+  <div class="row loan-process">
+    <!-- Left Section: Cards -->
+    <div class="col-md-8">
+      <!-- Row 1: Two Cards -->
+      <div class="row">
+        <div class="col-md-6 col-6 mb-3">
+          <div class="process-card p-3 text-center text-md-start m-2">
+            <div class="icon mb-2">
+              <i class="pi pi-user-plus fs-4 text-orange"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">Lead Capture</h5>
+            <p class="mb-0">
+              Capture leads from multiple channels automatically.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-6 mb-3">
+          <div class="process-card p-3 text-center text-md-start m-2">
+            <div class="icon mb-2">
+              <i class="pi pi-folder fs-4 text-orange"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">Document Collection</h5>
+            <p class="mb-0">Gather and manage borrower documents securely.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Three Cards -->
+      <div class="row">
+        <div class="col-md-4 col-6 mb-3">
+          <div class="process-card p-3 text-center text-md-start m-2">
+            <div class="icon mb-2">
+              <i class="pi pi-check-circle fs-4 text-orange"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">Credit Evaluation</h5>
+            <p class="mb-0">Fetch and evaluate credit reports instantly.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-6 mb-3">
+          <div class="process-card p-3 text-center text-md-start m-2">
+            <div class="icon mb-2">
+              <i class="pi pi-link fs-4 text-orange"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">Lender Matching</h5>
+            <p class="mb-0">
+              Match applications to suitable lenders automatically.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-6 mb-3">
+          <div class="process-card p-3 text-center text-md-start m-2">
+            <div class="icon mb-2">
+              <i class="pi pi-percentage fs-4 text-orange"></i>
             </div>
             <h5 class="fw-semibold mb-2">Disbursal & Commission</h5>
             <p class="mb-0">
@@ -260,30 +299,135 @@
       </div>
     </div>
 
-    <!-- Right Image Section -->
-    <div class="col-md-5 text-center mt-4 mt-md-0">
+    <!-- Right Section: Image -->
+    <div
+      class="col-md-4 text-center d-flex align-items-center justify-content-center mb-0"
+    >
       <img
         src="../../assets/images/process.png"
         alt="Woman on phone"
-        class="img-fluid"
-        style="max-height: 500px"
+        height="350px"
+        width="350px"
+        class="mb-0"
       />
     </div>
   </div>
 </div>
 
-<!-- FEATURES -->
+<!-- <div class="features-modern">
+  <h5 class="section-subtitle mt-3 mt-md-0">
+    Features that drive your Loan CRM
+  </h5>
+  <h2 class="section-title my-2">Features</h2>
+
+  <div class="row justify-content-center align-items-center gap-md-3 mt-5">
+
+    <div
+      class="col-lg-5 col-md-5 col-sm-5 col-6 bg-white rounded-3 feature-modern-box-one feature-box-odd"
+    >
+      <div class="icon m-2 p-2">
+        <i class="pi pi-users fs-1 text-orange"></i>
+      </div>
+      <h4 class="fw-semibold p-2">Lead Management</h4>
+
+      <p class="p-3">
+        Capture, assign, and monitor leads with advanced filters, status
+        tracking, and automated follow-ups—ensuring no opportunity is missed.
+      </p>
+    </div>
+
+    <div
+      class="col-lg-3 col-md-3 col-sm-3 col-6 bg-white rounded-3 feature-modern-box-one feature-box-even"
+    >
+      <h4 class="fw-semibold p-2">Document Management</h4>
+      <p class="p-2">
+        Securely collect, store, and verify borrower documents with seamless
+        access controls and document tracking for each application.
+      </p>
+      <div class="icon mb-2 m-2 p-2 w-100 text-md-end text-start">
+        <i class="pi pi-folder fs-1 text-orange"></i>
+      </div>
+    </div>
+
+    <div
+      class="col-lg-3 col-md-3 col-sm-3 col-6 bg-white rounded-3 feature-modern-box-one feature-box-odd"
+    >
+      <div class="icon m-2 p-2">
+        <i class="pi pi-chart-line fs-1 text-orange mt-1"></i>
+      </div>
+      <h4 class="fw-semibold p-2">Real-Time Sales Tracking</h4>
+      <p class="p-2">
+        Monitor daily sales activity, conversion rates, and loan disbursals in
+        real-time—empowering teams to stay proactive and goal-oriented.
+      </p>
+    </div>
+
+    <div
+      class="col-lg-3 col-md-3 col-sm-3 col-6 bg-white rounded-3 feature-modern-box-one feature-box-even"
+    >
+      <h4 class="fw-semibold p-2">Smart DSA Lifecycle Management</h4>
+      <p class="p-2">
+        Manage onboarding, activation, payouts, and performance reviews of DSAs
+        with full transparency and efficiency.
+      </p>
+      <div class="icon mb-2 m-2 p-2 w-100 text-md-end text-start">
+        <i class="pi pi-sitemap fs-1 text-orange"></i>
+      </div>
+    </div>
+
+
+    <div
+      class="col-lg-3 col-md-3 col-sm-3 col-6 bg-white rounded-3 feature-modern-box-one feature-box-odd"
+    >
+      <div class="icon m-2 p-2">
+        <i class="pi pi-id-card fs-1 text-orange mt-1 px-2"></i>
+      </div>
+      <h4 class="fw-semibold p-2">Credit Report Integration</h4>
+      <p class="p-2">
+        Instantly pull credit scores and reports from bureaus to assess borrower
+        eligibility and reduce approval time.
+      </p>
+    </div>
+
+    <div
+      class="col-lg-5 col-md-5 col-sm-5 col-6 bg-white rounded-3 feature-modern-box-one feature-box-even"
+    >
+      <h4 class="fw-semibold mb-2 mt-3 p-2">Multi-Lender Management</h4>
+      <p class="p-2">
+        Manage applications across multiple banks and NBFCs, compare offers, and
+        optimize lender mapping based on borrower profiles.
+      </p>
+      <div class="icon mb-2 m-2 p-2 w-100 text-md-end text-start">
+        <i class="pi pi-briefcase fs-1 text-orange"></i>
+      </div>
+    </div>
+
+
+
+    <div class="text-center mt-4 col-md-12 col-sm-12 p-2">
+      <button
+        class="d-inline-flex align-items-center justify-content-center button-view-more text-center"
+        [routerLink]="['/features']"
+      >
+        View More
+
+        <span class="text-black fs-5">→</span>
+      </button>
+    </div>
+  </div>
+</div> -->
+
 <section class="features-modern">
   <div class="container">
-    <h5 class="section-subtitle">Features that drive your Loan CRM forward</h5>
-    <h2 class="section-title">Features</h2>
+    <!-- <h2 class="section-subtitle fw-bold mb-2">Everything you need in one place</h2> -->
+    <h4 class="section-title pt-1">Everything you need in one place</h4>
     <div class="features-grid">
       <div class="feature-card text-center">
         <!-- <div class="icon-box"><i class="fas fa-address-card"></i></div> -->
         <img
           src="../../assets/images/icons/leads.svg"
           alt="Leads"
-          style="width: 80px; height: auto"
+          style="width: 60px; height: auto"
         />
         <h4 class="mt-3">Lead Management</h4>
         <!-- <p>
@@ -297,7 +441,7 @@
         <img
           src="../../assets/images/icons/documents.svg"
           alt="Leads"
-          style="width: 80px; height: auto"
+          style="width: 60px; height: auto"
         />
         <h4 class="mt-3">Document Management</h4>
         <!-- <p>
@@ -329,7 +473,7 @@
         <img
           src="../../assets/images/icons/cibil-report.svg"
           alt="Leads"
-          style="width: 80px; height: auto"
+          style="width: 60px; height: auto"
         />
         <h4 class="mt-3">Credit Report Integration</h4>
         <!-- <p>
@@ -342,7 +486,7 @@
         <img
           src="../../assets/images/icons/lender.svg"
           alt="Leads"
-          style="width: 80px; height: auto"
+          style="width: 60px; height: auto"
         />
         <h4 class="mt-3">Multi-Lender Management</h4>
         <!-- <p>
@@ -385,13 +529,16 @@
     </div>
   </div>
 </section>
+<!-- new feature section for mobile view end here -->
 
 <section class="lender-section">
-  <div class="container my-5">
+  <div class="my-5">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h2 class="fw-bold text-orange">Multi-Lender Management</h2>
-        <p class="mt-3">
+        <h2 class="fw-bold text-orange text-center px-3">
+          Multi-Lender Management
+        </h2>
+        <p class="m-3 px-3 fs-5">
           Manage relationships with multiple lenders from one centralized
           platform. Effortlessly match leads, track approvals, and boost
           conversions by connecting borrowers with the right lender at the right
@@ -408,24 +555,62 @@
     </div>
   </div>
 </section>
-<section class="features-modern">
-  <div class="container my-5">
+<section class="features-modern-style py-5">
+  <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6 text-center">
+      <!-- Image First on Mobile, Second on Desktop -->
+      <div class="col-md-6 text-center mb-4 mb-md-0">
         <img
-          src="assets/images/security-shield.svg"
+          src="assets/images/home/secure.png"
           alt="Secure CRM"
           class="img-fluid"
+          style="max-width: 70%; height: auto"
         />
       </div>
-      <div class="col-md-6">
-        <h2 class="fw-bold text-orange">Secure & Trusted Loan CRM Platform</h2>
-        <p class="mt-3 text-white">
+
+      <!-- Text Second on Mobile, First on Desktop -->
+      <div class="col-md-6 text-md-start">
+        <h2 class="fw-bold text-orange px-3">
+          Secure & Trusted Loan CRM Platform
+        </h2>
+        <p class="m-3 text-white fs-5 px-3">
           Your business and client data is fully protected with enterprise-grade
-          security. Our Loan CRM software ensures encrypted data handling, safe
-          document storage, and compliance with industry standards — so you can
-          focus on growth with complete peace of mind.
+          security. Our Loan CRM ensures encrypted data handling, safe document
+          storage, and compliance with industry standards — so you can focus on
+          growth with complete peace of mind.
         </p>
+        <ul class="list-unstyled px-4 text-white">
+          <li class="mb-2 d-flex align-items-start">
+            <img
+              src="assets/images/tick.svg"
+              alt="Check"
+              class="me-2"
+              width="25"
+              height="25"
+            />
+            Enterprise-grade encryption & data privacy
+          </li>
+          <li class="mb-2 d-flex align-items-start">
+            <img
+              src="assets/images/tick.svg"
+              alt="Check"
+              class="me-2"
+              width="25"
+              height="25"
+            />
+            Secure document upload & access control
+          </li>
+          <li class="mb-2 d-flex align-items-start">
+            <img
+              src="assets/images/tick.svg"
+              alt="Check"
+              class="me-2"
+              width="25"
+              height="25"
+            />
+            IP-based restriction
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -475,10 +660,41 @@
   </div>
 </section> -->
 
-<section class="pricing-section">
-  <h5 class="mb-1" style="color: #ee7846">Fair and flexible membership plan</h5>
-  <h2 style="color: #29415b">Our Pricing</h2>
+<section class="pricing-section text-center">
+  <h1 style="color: #ee7846" class="fw-bold">
+    CRM software for Loan Consultants
+  </h1>
 
+ <div class="row text-center p-3 mt-5">
+  <div
+    class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-4"
+    *ngFor="let feature of features"
+  >
+    <div class="d-flex flex-column align-items-center text-center h-100 px-2">
+      <!-- Icon and Title -->
+      <div class="d-flex align-items-center gap-2 justify-content-center mb-2 flex-wrap">
+        <img
+          src="assets/images/tick.svg"
+          alt="Check"
+          width="30"
+          height="30"
+          style="object-fit: contain"
+        />
+        <h3 class="fw-bold mb-0" style="color: #29415b">
+          {{ feature.title }}
+        </h3>
+      </div>
+
+      <!-- Subtitle -->
+      <p class="text-muted mt-2">{{ feature.subtitle }}</p>
+    </div>
+  </div>
+</div>
+
+  <!-- <h5 class="mb-1" style="color: #ee7846">Fair and flexible membership plan</h5> -->
+
+  <!-- <p class="m-2">Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar. Fermentum scelerisque sit consectetur hac mi. Mollis leo eleifend ultricies purus iaculis.</p> -->
+  <!-- <button class="discount-button">20% OFF</button> -->
   <div class="toggle-container">
     <div class="toggle-wrapper gap-4">
       <span [class.active]="!isYearly" (click)="togglePricing(false)"
@@ -496,25 +712,47 @@
   <div class="plans-wrapper">
     <ng-container *ngFor="let plan of pricingPlans">
       <div class="pricing-card card">
-        <div class="">
+        <div class="m-0 p-0">
           <div class="plan-badge" [ngClass]="plan.badgeClass">
             <i [class]="plan.icon"></i>
           </div>
-          <h4 class="plan-title">{{ plan.name }}</h4>
+          <h2 class="plan-title text-orange mb-2">{{ plan.name }}</h2>
+          <!-- <h4 class="price text-muted mt-0">
+          <del>$ {{ isYearly ? plan.yearly : plan.monthly }}</del>
+        </h4> -->
+
+          <!-- <h2 class="price">
+            {{ isYearly ? plan.yearly : plan.monthly }} /- INR
+          </h2> -->
           <h2 class="price">
-            {{ isYearly ? plan.yearly : plan.monthly }}/- INR
+            {{ isYearly ? plan.yearly : plan.monthly }} /- INR
+            <small class="text-muted" style="font-size: 0.75rem">+GST</small>
           </h2>
+          <!-- <p class="text-black fs-6">{{isYearly ? plan.yearly : plan.monthly }}  per month, paid annually</p> -->
           <div class="text-center mt-4">
             <button
               class="btn btn-secondary d-inline-flex align-items-center gap-2"
+              (click)="goToLogin()"
             >
               Get Started
             </button>
           </div>
           <!-- <p class="billing-info">/month billed annually</p> -->
           <ul class="feature-list">
-            <li *ngFor="let feature of plan.features">
-              <i class="fas fa-check-circle text-success me-2"></i>{{ feature }}
+            <li *ngFor="let feature of plan.features" class="text-left">
+              <!-- <i class="fas fa-check-circle text-success me-2"></i> -->
+             <span class="text-success p-1 d-inline-flex align-items-center" style="font-size: 30px">
+  <img
+    src="assets/images/tick.svg"
+    alt="Tick"
+    width="18"
+    height="18"
+    style="vertical-align: middle;"
+  />
+</span>
+
+
+              {{ feature }}
             </li>
           </ul>
         </div>
@@ -523,16 +761,19 @@
   </div>
 </section>
 
-<section class="faq">
-  <div class="container">
-    <h2>FAQs</h2>
+<section class="faq px-auto">
+  <div class="container mx-auto" style="width: 75%">
+    <h5 class="text-[#001D6C] fw-bold text-center text-orange m-4">
+      Frequently Asked questions
+    </h5>
+    <!-- <h2 class="text-orange">Bibendum amet at molestie mattis.</h2> -->
     <div
       *ngFor="let faq of faqs; let i = index; trackBy: trackByFn"
       class="faq-item"
     >
-      <h4 (click)="toggleFaq(i)">
+      <h4 (click)="toggleFaq(i)" class="faq-text">
         {{ faq.question }}
-        <span class="arrow" [class.open]="faq.open">&#9660;</span>
+        <span class="arrow" [class.open]="faq.open">&#43;</span>
       </h4>
       <div class="faq-answer" [ngClass]="{ show: faq.open }">
         {{ faq.answer }}

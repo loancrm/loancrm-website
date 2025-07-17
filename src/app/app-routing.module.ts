@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { FeaturesComponent } from './features/features.component';
+import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'features', component: FeaturesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'terms-of-service', component: TermsandconditionsComponent },
+
   // { path: 'pricing', component: PricingComponent },
 
 ];
