@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-home',
@@ -35,13 +36,13 @@ export class HomeComponent {
   title = "wintech"
   faqs = [
     {
-      question: 'Can I get a demo of Loan CRM?',
+      question: 'Can I get a demo of MyLoanCRM?',
       answer: "Of course! Just connect with our technical expert on the contact details mentioned at the bottom of the page and get a demo scheduled. Get a detailed explanation of the software and its features. Don't hesitate to ask questions!",
       open: false
     },
     {
       question: 'Can this CRM support different types of loans like home, personal, or business loans?',
-      answer: 'Yes, our Loan CRM is designed to support a wide range of loan categories including home, personal, auto, education, business, and more. It can be customized to suit your specific loan products and processes.',
+      answer: 'Yes, our MyLoanCRM is designed to support a wide range of loan categories including home, personal, auto, education, business, and more. It can be customized to suit your specific loan products and processes.',
       open: false
     },
     {
@@ -164,6 +165,8 @@ export class HomeComponent {
     'assets/images/clients/credit.png'
   ];
   numVisibleItems: number = 6;
+  plans: any[] = [];
+  displayPlans: any[] = [];
 
   workflowSteps = [
     { icon: 'fas fa-bullseye', title: 'Lead Capturing', description: 'Capture leads from multiple channels automatically.' },
@@ -172,10 +175,14 @@ export class HomeComponent {
     { icon: 'fas fa-handshake', title: 'Lender Mapping', description: 'Match applications to suitable lenders automatically.' },
     { icon: 'fas fa-rupee-sign', title: 'Disbursal & Payout', description: 'Track final disbursements and automate commission payouts.' }
   ];
-  constructor() { }
+  constructor(private contactservice: ContactService) {
+    // Initialize the form here if needed
+
+  }
 
   ngOnInit(): void {
     this.typeEffect();
+    this.loadPlans();
     this.items = [
 
       { label: 'Home', routerLink: '/' },
@@ -193,9 +200,9 @@ export class HomeComponent {
 
   }
 
-
-  togglePricing(yearly: boolean) {
+  togglePricing(yearly: boolean): void {
     this.isYearly = yearly;
+    this.updateDisplayPlans();
   }
   setVisibleItems(width: number): void {
     if (width < 576) {
@@ -219,6 +226,32 @@ export class HomeComponent {
       alert('Form submitted! We will contact you soon.');
       form.reset();
     }
+  }
+  loadPlans(): void {
+    this.contactservice.getSubscriptionPlans().subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.plans = data
+          .filter((plan: any) => plan.plan_type !== 'Free') // Exclude free trial plans
+          .map((plan: any) => ({
+            ...plan,
+            features: typeof plan.features === 'string' ? plan.features.split(',') : plan.features,
+            iconClass: this.getIcon(plan.plan_name)
+          }));
+        this.updateDisplayPlans();
+      },
+      error: () => alert('Failed to load subscription plans.')
+    });
+  }
+
+  updateDisplayPlans(): void {
+    const cycle = this.isYearly ? 'Yearly' : 'Monthly';
+    this.displayPlans = this.plans.filter(p => p.billing_cycle === cycle);
+  }
+  getIcon(planName: string): string {
+    if (planName.includes('Professional')) return 'fas fa-star';
+    if (planName.includes('Basic')) return 'fas fa-layer-group';
+    return 'fas fa-bolt';
   }
   toggleFaq(index: number) {
     this.faqs[index].open = !this.faqs[index].open;

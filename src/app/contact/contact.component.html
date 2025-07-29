@@ -11,7 +11,7 @@
   class="container mb-5 my-2 py-3 border border-black rounded-4 overflow-hidden"
 >
   <div class="row g-0 flex-column flex-md-row pt-3 contact-form">
-    <!-- Left Column: Contact Info with Image Background -->
+    <!-- Left Column: Contact Info -->
     <div
       class="col-12 col-md-6 contact-info-container text-white p-4 p-md-5 rounded-2"
     >
@@ -19,13 +19,11 @@
         class="d-flex flex-column justify-content-between h-100 position-relative"
       >
         <div class="overlay mt-3"></div>
-        <!-- Top Text -->
         <div class="content-top px-2 px-md-3 mb-4 mt-3 d-none d-md-block">
           <h2>Contact Information</h2>
           <p>Say something to start a live chat!</p>
         </div>
 
-        <!-- Contact Details -->
         <div class="contact-details py-0 mb-0 rounded-4 mt-md-0 mt-10">
           <div class="mb-3 d-flex align-items-start m-2 m-md-3 p-2 p-md-3">
             <i class="fa fa-phone me-3 mt-1 fs-4"></i>
@@ -34,43 +32,61 @@
 
           <div class="mb-3 d-flex align-items-start m-2 m-md-3 p-2 p-md-3">
             <i class="fa fa-envelope me-3 mt-1 fs-4"></i>
-            <p class="mb-0 fs-5 px-2">teamloancrm&#64;gmail.com</p>
+            <p class="mb-0 fs-5 px-2">connect&#64;myloancrm.com</p>
           </div>
-
-          <!-- <div class="d-flex align-items-start m-2 m-md-3 p-2 p-md-3">
-            <i class="fa fa-map-marker-alt me-3 mt-1 fs-4"></i>
-            <p class="mb-0 fs-5 px-md-2 px-1">
-              Hyderabad,
-              Telangana
-            </p>
-          </div> -->
         </div>
       </div>
     </div>
 
-    <!-- Right Column: Form -->
-    <div class="col-12 col-md-6 p-4 mt-5 right-contact-form">
-      <form class="needs-validation right-contact" novalidate>
+    <!-- Right Column: Contact Form -->
+    <div
+      class="col-12 col-md-6 right-contact-form d-flex align-items-center justify-content-center"
+    >
+      <form
+        [formGroup]="contactForm"
+        class="right-contact w-100"
+        (ngSubmit)="onSubmit()"
+        novalidate
+      >
         <div class="row mb-3 align-items-center">
           <div class="col-md-6 mb-3 mb-md-0">
-            <label for="firstName" class="form-label">First Name</label>
+            <label for="full_name" class="form-label">Full Name</label>
             <input
-              id="firstName"
+              id="full_name"
               type="text"
+              pInputText
+              formControlName="full_name"
               class="form-control border-bottom-only"
-              required
             />
-            <div class="invalid-feedback">Please enter your first name.</div>
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('full_name')?.touched &&
+                contactForm.get('full_name')?.invalid
+              "
+            >
+              Please enter your full name.
+            </div>
           </div>
+
           <div class="col-md-6">
-            <label for="lastName" class="form-label">Last Name</label>
+            <label for="company_name" class="form-label">Company Name</label>
             <input
-              id="lastName"
+              id="company_name"
               type="text"
+              pInputText
+              formControlName="company_name"
               class="form-control border-bottom-only"
-              required
             />
-            <div class="invalid-feedback">Please enter your last name.</div>
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('company_name')?.touched &&
+                contactForm.get('company_name')?.invalid
+              "
+            >
+              Please enter your company name.
+            </div>
           </div>
         </div>
 
@@ -80,10 +96,17 @@
             <input
               id="email"
               type="email"
+              pInputText
+              formControlName="email"
               class="form-control border-bottom-only"
-              required
             />
-            <div class="invalid-feedback">
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('email')?.touched &&
+                contactForm.get('email')?.invalid
+              "
+            >
               Please provide a valid email address.
             </div>
           </div>
@@ -92,11 +115,17 @@
             <input
               id="phone"
               type="tel"
+              pInputText
+              formControlName="phone"
               class="form-control border-bottom-only"
-              pattern="^[0-9+\-\s]{10,15}$"
-              required
             />
-            <div class="invalid-feedback">
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('phone')?.touched &&
+                contactForm.get('phone')?.invalid
+              "
+            >
               Please enter a valid phone number.
             </div>
           </div>
@@ -107,16 +136,31 @@
           <textarea
             id="message"
             rows="2"
+            pInputTextarea
+            formControlName="message"
             class="form-control border-bottom-only"
-            required
           ></textarea>
-          <div class="invalid-feedback">Please write your message.</div>
+          <div
+            class="invalid-feedback d-block"
+            *ngIf="
+              contactForm.get('message')?.touched &&
+              contactForm.get('message')?.invalid
+            "
+          >
+            Please write your message.
+          </div>
         </div>
 
         <div class="text-left mt-4">
-          <button type="submit" class="btn btn-orange px-4 py-2">
-            Send Message
-          </button>
+          <button
+            type="submit"
+            pButton
+            [label]="loading ? 'Sending...' : 'Send Message'"
+            [disabled]="loading"
+            class="btn-orange px-4 py-2"
+            iconPos="left"
+            [icon]="loading ? 'pi pi-spin pi-spinner' : ''"
+          ></button>
         </div>
       </form>
     </div>

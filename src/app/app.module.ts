@@ -15,6 +15,7 @@ import { ContactModule } from './contact/contact.module';
 import { FooterModule } from './footer/footer.module';
 import { LoadingModule } from './loading/loading.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -33,11 +34,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HomeModule,
     ContactModule,
     FooterModule,
-    LoadingModule
-
+    LoadingModule,
+    HttpClientModule
   ],
   providers: [
-      { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [AppComponent]
 })
