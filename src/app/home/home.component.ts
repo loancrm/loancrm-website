@@ -42,7 +42,7 @@ export class HomeComponent {
     },
     {
       question: 'Can this CRM support different types of loans like home, personal, or business loans?',
-      answer: 'Yes, our MyLoanCRM is designed to support a wide range of loan categories including home, personal, auto, education, business, and more. It can be customized to suit your specific loan products and processes.',
+      answer: 'Yes, our MyLoanCRM is designed to support a wide range of loan categories including Home, Personal, Professional, Education, Business, and more. It can be customized to suit your specific loan products and processes.',
       open: false
     },
     {
@@ -51,8 +51,8 @@ export class HomeComponent {
       open: false
     },
     {
-      question: 'Can I integrate the CRM with my existing systems and lender platforms?',
-      answer: 'Yes, the CRM offers flexible integration options via APIs, making it easy to connect with your existing tools such as accounting software, credit bureaus, and partner lender portals.',
+      question: 'Is the platform mobile-friendly for field agents and sales teams?',
+      answer: 'Top platforms offer responsive web interfaces or dedicated mobile apps so teams can access the CRM on the go.',
       open: false
     },
     {
@@ -62,8 +62,8 @@ export class HomeComponent {
     },
 
     {
-      question: 'How does the CRM help with compliance and audit readiness?',
-      answer: 'The system keeps detailed logs of every interaction, stores necessary documents securely, and provides audit trails to ensure you meet regulatory requirements and can respond to compliance checks efficiently.',
+      question: 'Can multiple teams or branches use the platform simultaneously?',
+      answer: 'Advanced CRMs include role-based access control (RBAC) and multi-branch support for team scalability and permission management.',
       open: false
     }
   ];
