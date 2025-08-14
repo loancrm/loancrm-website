@@ -1605,7 +1605,20 @@ h2 {
 }
 
 .letter-spacing {
+  font-size: 16px; /* default desktop size */
   letter-spacing: 2px;
+}
+
+@media (max-width: 768px) { /* tablet & mobile */
+  .letter-spacing {
+    font-size: 12px; /* smaller for mobile */
+  }
+}
+
+@media (max-width: 480px) { /* small mobile */
+  .letter-spacing {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 768px) {
