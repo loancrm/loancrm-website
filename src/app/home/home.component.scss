@@ -267,6 +267,9 @@ p {
   // margin-top: 180px;
 }
 
+.contsd{
+  width: 75% !important;
+}
 /* Tablet: 768px to 991.98px */
 @media (max-width: 991.98px) {
   .about-section {
@@ -336,6 +339,13 @@ p {
 //   flex-direction: row;
 //   gap: 5px;
 // }
+.faq-item{
+  padding: 10px !important;
+  // width: 86% !important;
+}
+.contsd{
+  width: 86% !important;
+}
 }
 
 /* Banner text for desktop */
@@ -766,6 +776,9 @@ background: #8E89D0;
   .card-bdjs{
     margin: 0%;
   }
+  // .multi-lender{
+  //   padding: 0%;
+  // }
 //   .homebanner .row {
 //     flex-direction: row !important; /* Forces side-by-side on small screens too */
 //   }
@@ -1366,7 +1379,7 @@ justify-self: center;
   }
   .disbursalcms{
     width: 100%;
-    margin: auto !important;
+    // margin: auto !important;
     border-radius: 15px;
     //  margin-left: 10px;
   }
@@ -1527,15 +1540,15 @@ justify-self: center;
 //   color: #212529;
 // }
 
-.btn-primary {
-  // background: linear-gradient(45deg, #4e54c8, #8f94fb);
-  background:  #8E89D0;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-}
+// .btn-primary {
+//   // background: linear-gradient(45deg, #4e54c8, #8f94fb);
+//   // background:  #8E89D0;
+//   border: none;
+//   padding: 1rem 2rem;
+//   border-radius: 50px;
+//   color: #fff;
+//   cursor: pointer;
+// }
 
 .how-it-works-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2623,7 +2636,7 @@ justify-self: center;
 
 .stats-section {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 10px;
       font-family: Arial, sans-serif;
       font-weight: 700px;
       
@@ -2816,6 +2829,7 @@ h6{
 .containeryt h2 {
   font-size: 2rem; /* Indigo */
   font-weight: 700;
+  margin-bottom: 5px;
 }
 .containeryt h2 span {
   color: #8E89D0; /* Indigo */
@@ -3103,10 +3117,14 @@ h6{
   .homebanner {
     padding: 0;
     padding: 0;
-    height: 350px;
+    height: 320px;
     margin: 0%;
     gap: 0;
   }
+  .whycrm-heading{
+    margin: 0%;
+  }
+ 
   // .banerimg{
   //   display: none;
   // }
@@ -3347,7 +3365,7 @@ h6{
   height: 100px !important;
   width: 100% !important;
   // align-self: center;
-  margin-top: 50px;
+  margin-top: 20px;
 
 
 }
@@ -3363,7 +3381,7 @@ h6{
   // margin: 8px;
   margin-right: 5px;
   border-radius: 24px;
-  background:#FFFFFF;
+  // background:#FFFFFF;
   // background: #5434E1; 
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
@@ -3443,7 +3461,9 @@ h6{
     margin-right: 20px; 
   }
     .commission-card h5{
-    font-size: 1.1rem; /* Slightly smaller font for mobile */
+    font-size: 20px; /* Slightly smaller font for mobile */
+    text-align: left;
+
   }
 
   .commission-card p{
@@ -3534,6 +3554,7 @@ h6{
 .multi-lender {
   text-align: center;
   padding: 40px 20px;
+  margin-bottom: 0%;
 }
 
 .vertical-slider {
@@ -3878,4 +3899,48 @@ h6{
 //     max-width: 100%;
 //     height: auto;
 //   }
+
+.pictuebanner {
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .pictuebanner {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    flex-direction: row !important; /* keep side by side */
+    flex-wrap: nowrap !important;
+  }
+
+  .pictuebanner > div {
+    flex: 1 1 60%; /* each side takes 50% width */
+    max-width: 60%;
+  }
+
+  .pictuebanner > div:first-child {
+    text-align: left; /* text stays left */
+  }
+
+  .pictuebanner > div:last-child {
+    text-align: right; /* image stays right */
+  }
+
+  .banerimg {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    width: 100%; /* stretch image inside its 50% space */
+    height: auto; /* maintain aspect ratio */
+  }
+  .bannerhometext {
+    font-size: 18px;
+  }
+  .pictuebanner p {
+    font-size: 14px !important;
+  }
+  .homenannerbtn button {
+    font-size: 9px !important;
+    flex-wrap: nowrap !important;
+    padding: 0 !important;
+    height: 20px !important;
+  }
+}
 

@@ -368,7 +368,7 @@
   </div>
   <div class="">
     <!-- <img src="../../assets/images/pra" alt=""> -->
-    <section data-aos="zoom-in" data-aos-duration="1500" class="section-bg">
+    <!-- <section data-aos="zoom-in" data-aos-duration="1500" class="section-bg">
       <div class="mx-2">
         <p-carousel
           [value]="images"
@@ -378,6 +378,26 @@
           [numScroll]="1"
           [showIndicators]="false"
           [showNavigators]="false"
+        >
+          <ng-template let-image pTemplate="item">
+            <img [src]="image" class="vfkk" />
+          </ng-template>
+        </p-carousel>
+      </div>
+    </section> -->
+    <section class="section-bg">
+      <div class="mx-2">
+        <p-carousel
+          #carousel
+          [value]="images"
+          [numVisible]="numVisibleItems"
+          [circular]="true"
+          [autoplayInterval]="4000"
+          [numScroll]="1"
+          [showIndicators]="false"
+          [showNavigators]="false"
+          (mouseenter)="carousel.stopAutoplay()"
+          (mouseleave)="carousel.startAutoplay()"
         >
           <ng-template let-image pTemplate="item">
             <img [src]="image" class="vfkk" />
@@ -868,31 +888,22 @@
   </section>
   <br />
 </div>
-<section class="freetrail">
+<section class="freetrail"> 
   <div class="gfgfd">
-    <img src="../../assets/images/Mockup (4).svg" alt="" />
-    <div>
-      <h1 class="text-center" style="margin-top: 20px">
-        Unlock Full Access for <br />
-        <span (click)="goToLogin()" style="color: #8e89d0">30 Days</span> -Its
-        On Us
-      </h1>
-      <br />
-      <div class="dfdfd">
-        <button (click)="goToLogin()" class="btn btn-primary trynow">
-          <span style="margin-top: 3px">Try Now</span>
-          <img
-            src="../../assets/images/icons/right-arrow.svg"
-            alt="Right arrow"
-          />
-        </button>
-      </div>
-    </div>
-  </div>
+  <img src="../../assets/images/Mockup (4).svg" alt="">
+   <div>
+      <h2 class="text-center" style="margin-top: 20px; text-align: center;">
+        Unlock Full Access for<br>
+        <span (click)="goToLogin()" style="color: #8E89D0;">30 Days</span> - It's On Us
+      </h2>
+     <img (click)="goToLogin()" src="../../assets/images/unclockbutton copy.svg" alt="" style="display: flex; justify-self: center;">
+   </div>
+   </div>
 </section>
+              
 
 <section class="faq px-auto">
-  <div class="container mx-auto" style="width: 75%">
+  <div class="container mx-auto contsd">
     <h5 class="text-[#8E89D0] fw-bold text-center m-4">
       Frequently Asked
       <span style="color: #8e89d0; font-weight: 100px">Questions</span>
