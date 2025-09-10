@@ -1,192 +1,523 @@
-/* === Feature Map Section === */
-.feature-map-section {
-  background: linear-gradient(to bottom, #29415B, #578AC1);
-  position: relative;
-  height: 700px;
-  overflow: hidden;
-}
+// /* === Feature Map Section === */
+// .feature-map-section {
+//   // background: linear-gradient(to bottom, #29415B, #578AC1);
+//   position: relative;
+//   height: 700px;
+//   overflow: hidden;
+// }
 
-/* === Feature Banner Image === */
-.feature-map-img {
+// /* === Feature Banner Image === */
+// .feature-map-img {
  
-  width: 100%;
-}
+//   width: 100%;
+// }
 
-/* === Common Box Styling === */
-.feature-box {
-  position: absolute;
-  width: 100px;
-  text-align: center;
-  font-size: 14px;
-  z-index: 10;
-}
+// /* === Common Box Styling === */
+// .feature-box {
+//   position: absolute;
+//   width: 100px;
+//   text-align: center;
+//   font-size: 14px;
+//   z-index: 10;
+// }
 
-.feature-box .box-content {
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  width: 200px;
-}
+// .feature-box .box-content {
+//   background-color: white;
+//   border: 1px solid #ccc;
+//   padding: 10px;
+//   border-radius: 8px;
+//   width: 200px;
+// }
 
-.box-content > i {
-  color: #ee7846;
-}
+// .box-content > i {
+//   color: #ee7846;
+// }
 
-.text-orange {
-  color: #ee7846;
-  font-size: 20px;
-}
-// .icon-top{
+// .text-orange {
+//   color: #ee7846;
+//   font-size: 20px;
+// }
+// // .icon-top{
+// //   position: relative;
+// // }
+// // .icon-circle {
+// //   position: relative;
+// //   top:-80%;
+// //   left:-50%;
+// //   width: 60px;
+// //   height: 60px;
+// //   background-color: #e3dedb; /* Example: orange */
+// //   border-radius: 10%;
+// //   display: flex;
+// //   align-items: center;
+// //   justify-content: center;
+// //   color: white;
+// // }
+
+// /* Position wrapper relative to allow absolute positioning of icon */
+// .service-box {
 //   position: relative;
 // }
+
+// .icon-wrap {
+//   position: absolute;
+//   top: -5px; /* pushes icon above the box */
+//   left: 30px; /* centers it horizontally relative to the box's left */
+//   z-index: 2;
+// }
+
 // .icon-circle {
-//   position: relative;
-//   top:-80%;
-//   left:-50%;
-//   width: 60px;
-//   height: 60px;
-//   background-color: #e3dedb; /* Example: orange */
-//   border-radius: 10%;
+//   width: 55px;
+//   height: 55px;
+//   background-color: #ffffff;
+//   border-radius: 12px;
 //   display: flex;
 //   align-items: center;
 //   justify-content: center;
-//   color: white;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 // }
 
-/* Position wrapper relative to allow absolute positioning of icon */
-.service-box {
-  position: relative;
+
+// /* === Line Styling for Desktop === */
+// @media (min-width: 1024px) {
+//   .line {
+//     width: 2px;
+//     background-color: #ee7846;
+//     position: absolute;
+//   }
+
+//   .line-leads {
+//     height: 250px;
+//     transform: rotate(110deg);
+//   }
+
+//   .line-lenders {
+//     height: 170px;
+//     transform: rotate(135deg);
+//   }
+
+//   .line-sanctions {
+//     height: 180px;
+//     transform: rotate(35deg);
+//   }
+
+//   .line-callbacks {
+//     height: 200px;
+//     transform: rotate(45deg);
+//   }
+
+//   .line-top-left {
+//     top: -50%;
+//     right: -90%;
+//   }
+
+//   .line-top-right {
+//     top: 55%;
+//     left: 60%;
+//     margin: 5px;
+//   }
+
+//   .line-bottom-left {
+//     top: 35%;
+//     right: -20%;
+//   }
+
+//   .line-bottom-right {
+//     top: 42%;
+//     left: 30%;
+//   }
+
+//   /* === Box Positions for Desktop === */
+//   .box-top-left {
+//     top: 45%;
+//     left: 8%;
+//   }
+
+//   .box-top-right {
+//     top: 25%;
+//     right: 40%;
+//   }
+
+//   .box-bottom-left {
+//     top: 100%;
+//     left: 15%;
+//   }
+
+//   .box-bottom-right {
+//     bottom: 1%;
+//     right: 17%;
+//   }
+// }
+
+// /* === Mobile View: Hide All Except Image === */
+// @media (max-width: 767.98px) {
+//   .feature-box,
+//   .line {
+//     display: none !important;
+//   }
+
+//   .feature-map-img {
+//     max-width: 90%;
+//     margin: 30px auto;
+//     display: block;
+//     position: relative;
+//     top: 78px;
+//   }
+
+//   .feature-map-section {
+//     height: auto;
+//     padding-bottom: 40px;
+//   }
+// }
+
+// /* === Optional Small Device Tweaks === */
+// @media (max-width: 575.98px) {
+//   .text-orange {
+//     font-size: 16px;
+//   }
+//    .icon-wrap {
+//     left: 15px;
+//     top: 0px;
+//     transform: scale(0.9);
+//   }
+//   .icon-circle{
+//     width:50px;
+//     height:50px
+//   }
+//    .service-box {
+//     margin-bottom: 1.5rem; /* or use 2rem for more spacing */
+//   }
+// }
+// .features-heading{
+//   margin: 0;
+//   padding: 50px 0;
+// }
+// .feature-grid {
+//   // display: grid;
+//   //  grid-template-columns: repeat(3, 1fr);
+//   // // justify-content: space-between;
+//   // // flex-wrap: wrap; 
+//   // // gap: 20px; 
+//   // padding: 20px;
+//    display: grid;
+//   grid-template-columns: repeat(3, 2fr); /* 3 equal columns */
+//   gap: 20px !important; /* gap between columns */
+//   margin-left: 40px;
+// }
+// .feature-grid p{
+//   color: #8E89D0;
+// }
+// // .featurecard {
+// //   flex: 1 1 calc(33.333% - 20px); 
+// //   // box-shadow: 0.5px 0.5px 0.5px 0.5px #98A2B3;
+// //   box-shadow: 0 0 4px 2px #98A2B3;
+
+// //   border-radius: 8px;
+// //   padding: 20px;
+// //   background-color: #ffffff;
+// //   transition: transform 0.3s ease;
+// //   height: 335px;
+// //   width: 370px;
+// //   border: 0.5px solid #ffffff;
+// // }
+// // .featurecard p {
+// //   margin: 0;
+// // }
+// .featurecard {
+//   // flex: 1 1 calc(33.333% - 20px); 
+//   box-shadow: 0 0 4px 2px #8E89D0;
+//   border-radius: 8px;
+//   padding: 20px;
+//   background-color: #ffffff;
+//   transition: transform 0.3s ease;
+//   height: 100% !important;
+//   width: 470px !important;
+//   border: 0.5px solid #ffffff;
+//   margin-top: 20px; 
+//   margin-bottom: 0%;
+// }
+
+// .card{
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   flex-direction: column;
+//   width: 100%;
+// }
+
+// /* REMOVE unwanted default margins */
+// .featurecard h3,
+// .featurecard p {
+//   margin: 0;
+//   padding: 0;
+//   text-align: left;
+//   width: 100%;
+// }
+
+// // .featurecard:hover {
+// //   transform: translateY(-5px);
+// // }
+
+ 
+// @media (max-width: 768px) {
+//   .feature-grid {
+//   display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//    margin: auto;
+//   // justify-content: space-between;
+//   // flex-wrap: wrap; 
+//   // gap: 20px; 
+//   padding: 20px;
+
+//   // display: grid;
+//   // grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+//   // gap: 8px !important; /* gap between columns */
+//   // margin-left: 40px;
+  
+// }
+//   .featurecard {
+//   // flex: 1 1 calc(33.333% - 20px); 
+//   box-shadow: 0 0 4px 2px #8E89D0;
+//   border-radius: 8px;
+//   padding: 20px;
+//   background-color: #ffffff;
+//   transition: transform 0.3s ease;
+//   height: 100% !important;
+//   width: 100% !important;
+//   border: 0.5px solid #ffffff;
+//   margin:auto;
+// }
+
+// .card-content {
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   flex-direction: column;
+//   width: 100%;
+// }
+// }
+
+// .card-featurecard{
+//   width: 100% !important;
+// }
+
+.fetu-section {
+    margin-bottom: 30px; /* Adds a gap between sections */
+    margin-top: 120px;
 }
 
-.icon-wrap {
-  position: absolute;
-  top: -5px; /* pushes icon above the box */
-  left: 30px; /* centers it horizontally relative to the box's left */
-  z-index: 2;
+
+/* Ensures image and content stay on the same line */
+.rre {
+    display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between; /* Ensures the columns are spaced equally */
+    gap: 100px !important;
+    justify-content: center;
+}
+/* Custom class for text */
+.featu {
+    display: flex;               /* Enable Flexbox */
+    flex-direction: column;      /* Stack content vertically (heading + paragraph) */
+    // justify-content: center;     /* Vertically center content */
+    // align-items: center;         /* Horizontally center content */
+    // text-align: center;          /* Center the text inside the elements */
+    height: 100%;                /* Ensure full height for vertical centering */
+    padding: 20px;               /* Optional: Add some padding for spacing */
 }
 
-.icon-circle {
-  width: 55px;
-  height: 55px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+/* Optional: styling for heading */
+.featu h2 {
+    font-size: 2rem;             /* Adjust heading size */
+    margin-bottom: 15px;         /* Space between heading and paragraph */
 }
 
-
-/* === Line Styling for Desktop === */
-@media (min-width: 1024px) {
-  .line {
-    width: 2px;
-    background-color: #ee7846;
-    position: absolute;
-  }
-
-  .line-leads {
-    height: 250px;
-    transform: rotate(110deg);
-  }
-
-  .line-lenders {
-    height: 170px;
-    transform: rotate(135deg);
-  }
-
-  .line-sanctions {
-    height: 180px;
-    transform: rotate(35deg);
-  }
-
-  .line-callbacks {
-    height: 200px;
-    transform: rotate(45deg);
-  }
-
-  .line-top-left {
-    top: -50%;
-    right: -90%;
-  }
-
-  .line-top-right {
-    top: 55%;
-    left: 60%;
-    margin: 5px;
-  }
-
-  .line-bottom-left {
-    top: 35%;
-    right: -20%;
-  }
-
-  .line-bottom-right {
-    top: 42%;
-    left: 30%;
-  }
-
-  /* === Box Positions for Desktop === */
-  .box-top-left {
-    top: 45%;
-    left: 8%;
-  }
-
-  .box-top-right {
-    top: 25%;
-    right: 40%;
-  }
-
-  .box-bottom-left {
-    top: 100%;
-    left: 15%;
-  }
-
-  .box-bottom-right {
-    bottom: 1%;
-    right: 17%;
-  }
-}
-
-/* === Mobile View: Hide All Except Image === */
-@media (max-width: 767.98px) {
-  .feature-box,
-  .line {
-    display: none !important;
-  }
-
-  .feature-map-img {
-    max-width: 90%;
-    margin: 30px auto;
-    display: block;
-    position: relative;
-    top: 78px;
-  }
-
-  .feature-map-section {
-    height: auto;
-    padding-bottom: 40px;
-  }
-}
-
-/* === Optional Small Device Tweaks === */
-@media (max-width: 575.98px) {
-  .text-orange {
-    font-size: 16px;
-  }
-   .icon-wrap {
-    left: 15px;
-    top: 0px;
-    transform: scale(0.9);
-  }
-  .icon-circle{
-    width:50px;
-    height:50px
-  }
-   .service-box {
-    margin-bottom: 1.5rem; /* or use 2rem for more spacing */
-  }
+/* Optional: styling for paragraph */
+.featu p {
+    font-size: 1rem;             /* Adjust paragraph size */
+    line-height: 1.6;            /* Line height for better readability */
+    margin: 0;                   /* Remove margin for cleaner spacing */
 }
 
 
+
+.reeee {
+    display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between; /* Ensures the columns are spaced equally */
+    // gap: 0% !important;
+    justify-content: center;
+    justify-self: center;
+}
+p{
+    text-align: left;
+}
+.aa{
+  display: flex;               /* Enable Flexbox */
+    flex-direction: column;      /* Stack content vertically (heading + paragraph) */
+    // justify-content: center;     /* Vertically center content */
+    // align-items: center;         /* Horizontally center content */
+    // text-align: center;          /* Center the text inside the elements */
+    height: 100%;                /* Ensure full height for vertical centering */
+    padding: 20px;               /* Optional: Add some padding for spacing */
+    text-align: left;
+}
+.ra h2 {
+    font-size: 2rem;             /* Adjust heading size */
+    margin-bottom: 15px;         /* Space between heading and paragraph */
+}
+
+/* Optional: styling for paragraph */
+.aa p {
+    font-size: 1rem;             /* Adjust paragraph size */
+    line-height: 1.6;            /* Line height for better readability */
+    margin: 0;                   /* Remove margin for cleaner spacing */
+}
+
+// .imagree {
+//     // display: flex;
+//     // align-items: center; /* Vertically align the content */
+//     // justify-content: center;
+//     // padding: 10px;  /* Adds some padding between the content and image */
+//     height: 550px;
+// }
+
+/* Ensures the image scales correctly */
+.img-fluid {
+    // max-width: 500%;  /* Image will not overflow */
+    height: 318px;     /* Maintains aspect ratio */
+    // margin: 200px;   /* Center the image */
+    // justify-self: center;
+    width: 534px;
+}
+.img-flid{
+    height: 318px;
+    width: 534px;
+}
+
+/* Ensure proper space between text and image */
+.image-section {
+    padding-right: 20px; /* Space between image and text */
+}
+
+.text-section {
+    padding-left: 20px;  /* Space between text and image */
+}
+.lead{
+  color: #686868;
+  font-size: 18px;
+  font-weight: 400px;
+}
+/* Mobile View (max-width: 768px) */
+
+
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    
+    /* General Margin Adjustments for Sections */
+    .fetu-section {
+        margin-top: 40px;  /* Reduced top margin for mobile */
+        margin-bottom: 20px;  /* Reduced bottom margin */
+    }
+
+    /* Main container of the sections, make sure it's stacked vertically */
+    .rre {
+        flex-direction: column;  /* Stack content vertically */
+        gap: 20px;               /* Reduce gap between elements */
+        align-items: center;     /* Center align elements */
+        justify-content: center; /* Center content in the container */
+    }
+
+    /* Adjust Image Section */
+    .featu img {
+        width: 100%;          /* Make image responsive, take up full width */
+        height: auto;         /* Maintain aspect ratio */
+        margin: 0 auto;       /* Center the image */
+        max-width: 100%;      /* Ensure it doesn't overflow */
+    }
+
+    /* Text Section Adjustments */
+    .featu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;   /* Align text to the start (left) */
+        padding: 20px;         /* Padding for spacing */
+    }
+
+    /* Heading adjustments */
+    .featu h2 {
+        font-size: 1.6rem;     /* Adjust font size for mobile */
+        margin-bottom: 15px;   /* Space between heading and paragraph */
+        text-align: left;      /* Left-align the heading */
+        color: black;          /* Ensure heading color is black */
+    }
+
+    /* Paragraph adjustments */
+    .featu p {
+        font-size: 1rem;       /* Smaller font size for readability */
+        line-height: 1.6;      /* Line height for readability */
+        margin: 0;             /* Remove default margins */
+        text-align: justify;   /* Justify align paragraph text */
+        color: black;          /* Ensure paragraph color is black */
+    }
+
+    /* Adjust the layout of .reeee to be stacked vertically */
+    .reeee {
+        display: flex;
+        flex-direction: column;  /* Stack text and image vertically */
+        align-items: center;     /* Center align content */
+        gap: 15px;               /* Reduce gap between text and image */
+        justify-content: center; /* Center content */
+    }
+
+    /* Adjust the layout of .aa */
+    .aa {
+        padding: 10px;          /* Reduced padding for mobile */
+        text-align: left;       /* Align text to the start (left) */
+    }
+
+    .aa h2 {
+        font-size: 1.5rem;      /* Smaller font size */
+        margin-bottom: 10px;    /* Space between heading and paragraph */
+        text-align: left;       /* Left-align the heading */
+        color: black;           /* Ensure heading color is black */
+    }
+
+    .aa p {
+        font-size: 0.9rem;      /* Adjust paragraph font size */
+        line-height: 1.5;       /* Adjust line height for better readability */
+        margin: 0;             /* Remove margin */
+        text-align: justify;   /* Justify align paragraph text */
+        color: black;          /* Ensure paragraph color is black */
+    }
+
+    /* Adjust image section to make images responsive and centered */
+    .col-md-6.image-section img {
+        max-width: 100%;        /* Ensure images fit within the container */
+        height: auto;           /* Maintain aspect ratio */
+    }
+
+    /* Adjust the overall gap between sections */
+    .reeee {
+        gap: 15px;              /* Reduce gap between text and image */
+    }
+
+    /* For larger sections, make sure content is centered */
+    .rre, .reeee {
+        gap: 20px;              /* Adjust the space between image and text */
+    }
+
+    /* Remove any br tags, as spacing is handled by CSS */
+    .featu p, .aa p {
+        margin-bottom: 10px;  /* Ensure that there is space between paragraphs */
+    }
+
+    /* Ensure that sections with images and text are equally spaced */
+    .fetu-section,
+    .reeee {
+        gap: 20px;  /* Equal spacing between images and text */
+    }
+}

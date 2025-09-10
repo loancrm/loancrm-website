@@ -108,11 +108,61 @@
 <div class="sticky-cta">
   <button class="btn btn-primary">Schedule a Call</button>
 </div> -->
+ <!-- <div class="subscription-container">
+  <h2 class="newsletter-heading" style=" display: flex; flex-direction: column;  justify-content: center; align-items: center;">
+    Subscribe to Our Newsletter</h2>
+  <div class="subscription-content">
+  
 
-<footer class="site-footer">
+    <form [formGroup]="subscribeForm" (ngSubmit)="onSubscribe()" novalidate>
+      <div class="form-wrapper">
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control newsletter-input"
+          placeholder="Enter your email"
+        />
+        <button
+          type="submit"
+          [disabled]="loading || subscribeForm.invalid"
+          class="btn newsletter-button"
+        >
+          {{ loading ? 'Subscribing...' : 'Subscribe' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+
+
+<footer class="site-footer" style="background-color: #F7F7F7;">
+  <div class="subscription-container">
+  <h4>Subscribe to our newsletter</h4>
+  <br>
+    <form [formGroup]="subscribeForm" (ngSubmit)="onSubscribe()" novalidate>
+      <div class="form-wrapper">
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control newsletter-input"
+          placeholder="Enter your email"
+        />
+        <button
+          type="submit"
+          [disabled]="loading || subscribeForm.invalid"
+          class="btn newsletter-button"
+        >
+          {{ loading ? 'Subscribing...' : 'Subscribe' }}
+        </button>
+      </div>
+    </form>
+  
+</div>
   <!-- Newsletter Section at Top -->
   <div class="newsletter-wrapper">
-    <div class="newsletter-box">
+    <!-- <div class="card" style="background-image: url('../../assets/images/BG\ \(1\).svg'); width: 800px; height: 100px;">
+      <div class="newsletter-box">
       <form [formGroup]="subscribeForm" (ngSubmit)="onSubscribe()" novalidate>
         <div class="d-flex align-items-center gap-2">
           <input
@@ -120,27 +170,47 @@
             formControlName="email"
             class="form-control newsletter-input me-2"
             placeholder="Enter your email"
-          /><button
+          />
+          
+          <button
             type="submit"
             [disabled]="loading || subscribeForm.invalid"
             class="btn newsletter-button"
           >
             {{ loading ? "Subscribing..." : "Subscribe" }}
           </button>
+
         </div>
       </form>
     </div>
+
+    </div> -->
+   
+
   </div>
 
   <!-- Main Footer Content -->
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-about">
-        <h3 class="text-uppercase fw-bold mb-2">MyLoanCRM</h3>
-        <p class="mb-3">
-          Empowering DSAs with smart, scalable CRM tools to streamline lead
-          management and boost growth.
-        </p>
+
+        <!-- <h3 class="text-uppercase fw-bold mb-2">MyLoanCRM</h3> -->
+         <!-- <img
+          src="../../assets/images/updatedlogo.png"
+          alt="MyLoanCRM" class="footer-logo"
+        /> -->
+      <div class="" >
+        <div>
+          <img
+          src="../../assets/images/updatedlogo.png"
+          alt="MyLoanCRM" class="footer-logo"
+        />
+        </div>
+          <div class="socialicons">
+          <a href="https://www.instagram.com/my_loan_crm?igsh=Nno3aWV4b2NiOW9r"><img src="../../assets/images/insta.svg"></a>
+          <a href="https://x.com/Myloancrm"><img src="../../assets/images/twitter.svg" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=61580323859697"><img src="../../assets/images/facebook.svg" alt=""></a>
+          <a href="https://www.youtube.com/@myloancrm"><img src="../../assets/images/youtube.svg" alt=""></a>
+        </div>
       </div>
 
       <div class="footer-links">
@@ -149,6 +219,7 @@
           <li><a routerLink="/home">Home</a></li>
           <li><a routerLink="/about">About Us</a></li>
           <li><a routerLink="/features">Features</a></li>
+          <li><a routerLink="/services">Services </a></li>
           <li><a routerLink="/contact">Contact Us</a></li>
         </ul>
       </div>
@@ -164,10 +235,11 @@
         <h4>Contact Us</h4>
         <div class="contact-info">
           <p class="mb-1">
-            <i class="fas fa-phone-alt me-2 text-white"></i> +91 81792 78882
+            <i class="text-white"></i> 
+            +91 81792 78882
           </p>
           <p>
-            <i class="fas fa-envelope me-2 text-white"></i>
+            <i class="text-white"></i>
             connect&#64;myloancrm.com
           </p>
         </div>
@@ -183,18 +255,13 @@
 
     <div class="footer-bottom">
       <div class="d-flex justify-content-between align-items-center">
-        <p>MyLoanCRM &copy; 2025 . All rights reserved.</p>
+        <p>© Copyright 2025, All Rights Reserved by MyLoanCRM</p>
       </div>
-      <!-- <div class="footer-bottom-right">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-      </div> -->
     </div>
   </div>
 </footer>
 
 <!-- STICKY CTA -->
-<div class="sticky-cta">
-  <button class="btn btn-primary">Schedule a Call</button>
-</div>
+<!-- <div class="sticky-cta" >
+  <button class="btn btn-primary" style="background-color: #5932EA;">Schedule a Call</button>
+</div> -->

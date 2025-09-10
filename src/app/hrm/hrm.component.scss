@@ -1,0 +1,152 @@
+.card {
+  border-radius: 18px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+.banner {
+  padding-top: 80px; /* Adds vertical spacing so the background is visible */
+  margin-bottom: 0 !important;
+  background: #2a58ff1f;
+}
+.banner h1 {
+  color: #1c1c1c;
+}
+.container h2 {
+  font-size: 2rem; /* Indigo */
+  font-weight: 700;
+}
+.container h2 span {
+  color:#8E89D0; /* Indigo */
+}
+
+.banner h2 {
+  font-size: 2rem; /* Indigo */
+  font-weight: 700;
+}
+.banner h2 span {
+  color:#8E89D0; /* Indigo */
+}
+.banner img{
+  width: 800px !important;
+  height: 600px;
+
+}
+
+.jk{
+  margin-bottom: 0% !important;
+  height: 300px;
+}
+.pricing-button {
+  display: block;                  /* Makes it respect margin auto */
+  margin: 20px auto;               /* Centers horizontally */
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color:#8E89D0;      /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 30px;            /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+/* Optional hover effect */
+.pricing-button:hover {
+  background-color:#8E89D0;
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    
+    /* Banner adjustments */
+    .banner {
+        padding-top: 40px; /* Less padding for mobile */
+    }
+
+    .banner img {
+        width: 100%; /* Image takes up full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Container and heading adjustments */
+    .container h2 {
+        font-size: 1.5rem; /* Slightly smaller font size for mobile */
+    }
+
+    .container h2 span {
+        color: #8E89D0;
+    }
+
+    .banner h2 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .banner h2 span {
+        color: #8E89D0;
+    }
+
+    /* Adjust card layout */
+    .card {
+        padding: 15px; /* Added padding for better spacing */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    /* Pricing button */
+    .pricing-button {
+        width: 80%; /* Make button more prominent */
+        padding: 12px 24px;
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Adjust the "jk" class for better spacing */
+    .jk {
+        height: auto; /* Let the height adjust based on content */
+        margin-bottom: 15px;
+    }
+
+    /* Adjust for about-section and ree section layout */
+    .about-section, .reeee {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;    /* Center content */
+        text-align: center;     /* Center text */
+    }
+
+    /* Text and image layout for smaller screens */
+    .ra, .aa {
+        padding: 15px; /* Add some padding for better readability */
+        text-align: center; /* Center text */
+    }
+
+    .ra h2, .aa h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    .ra p, .aa p {
+        font-size: 1rem;  /* Adjust paragraph size for mobile */
+        line-height: 1.6; /* Ensure readability */
+        margin: 10px 0;
+    }
+
+    /* Adjust image size */
+    .img-fluid {
+        width: 100%; /* Image takes up full width */
+        height: auto;
+    }
+
+    /* Adjust gap and layout for mobile */
+    .r {
+        flex-direction: column;  /* Stack images and text vertically */
+        gap: 0; /* Remove extra gap */
+        justify-content: center; /* Center content */
+    }
+
+    /* Adjust lead text */
+    .lead {
+        font-size: 16px;
+        font-weight: 400; /* Regular weight for lead text */
+        color: #686868;
+    }
+}

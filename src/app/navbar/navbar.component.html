@@ -1,10 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-  <div class="container-fluid px-4">
+<div class="d-flex justify-content-center">
+<nav class="navbar navbar-expand-lg navbar-light raj">
+  <div class="container-fluid ">
     <!-- Logo on the left -->
-    <div class="d-flex align-items-center" style="margin: 10px">
+    <div class="d-flex align-items-center">
       <a [routerLink]="['/home']">
         <img
-          src="../../assets/images/myloancrm logo.png"
+          src="../../assets/images/updatedlogo.png"
           alt="MyLoanCRM"
           style="height: 40px; width: auto"
         />
@@ -36,21 +37,21 @@
     >
       <!-- <i class="fas fa-bars text-black"></i> -->
       <img
-        src="/assets/images/navbar/hamburger.png"
+        src="../../assets/images/options (1).svg"
         alt="icon not"
-        width="30px"
-        height="30px"
+        width="19px"
+        height="12.6px"
       />
     </button>
 
     <!-- Center and right-aligned content -->
     <div
-      class="collapse navbar-collapse justify-content-between"
+      class="collapse navbar-collapse"
       id="navbarSupportedContent"
       #navbarCollapse
     >
       <!-- Centered nav links -->
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+      <ul class="navbar-nav mb-2 mb-lg-0 gap-3 w-100 justify-content-center">
         <li class="nav-item">
           <a
             class="nav-link"
@@ -78,6 +79,35 @@
             >Features</a
           >
         </li>
+        <li class="nav-item dropdown" dropdown>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/home']"
+                (click)="onNavItemClick('/home')"
+                >CRM</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/hrm']"
+                (click)="onNavItemClick('/hrm')"
+                >HRM</a
+              >
+            </li>
+          </ul>
+        </li>
         <li class="nav-item">
           <a
             class="nav-link"
@@ -90,7 +120,7 @@
       </ul>
 
       <!-- Book a Demo button on the right -->
-      <div class="d-flex align-items-center">
+      <div class="d-flex align-items-end mr-0">
         <a class="nav-link" href="https://app.loancrm.org/#/user/login">
           <button class="btn btn-primary">Login</button>
         </a>
@@ -98,3 +128,4 @@
     </div>
   </div>
 </nav>
+</div>

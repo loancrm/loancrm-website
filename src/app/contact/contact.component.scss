@@ -11,12 +11,12 @@
 .section-description {
   font-size: 18px;
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto 10px;
   line-height: 1.6;
-  color: #4a6fa5;
+  color:#8E89D0;
 }
 .section-description strong {
-  color: #3358f4;
+  color:#8E89D0;
 }
 
 .form-label {
@@ -34,35 +34,35 @@
 }
 
 textarea.form-control {
-  border-radius: 1rem;
+  border-radius: 4px;
   resize: none;
 }
 
-.contact-info-container {
-  background: url("/assets/images/contact/contact.png") center/cover no-repeat;
-  height: 100%;
-  min-height: 750px;
-  border-radius: 0.5rem;
-  position: relative;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+// .contact-info-container {
+//   // background: url("/assets/images/contact/contact.png") center/cover no-repeat;
+//   // height: 100%;
+//   // min-height: 750px;
+//   border-radius: 0.5rem;
+//   position: relative;
+//   color: white;
+//   display: flex;
+//   // flex-direction: column;
+//   // justify-content: space-between;
+// }
 
-.contact-info-container .overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  border-radius: 0.5rem;
-}
+// .contact-info-container .overlay {
+//   position: absolute;
+//   inset: 0;
+//   z-index: 0;
+//   border-radius: 0.5rem;
+// }
 
 .right-contact-form {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  padding: 2rem 1rem;
+  // padding: 2rem 1rem;
 }
 
 .right-contact {
@@ -74,25 +74,26 @@ textarea.form-control {
   position: relative;
 }
 
-.contact-info-container > * {
-  position: relative;
-  z-index: 1;
-}
+// .contact-info-container > * {
+//   position: relative;
+//   z-index: 1;
+// }
 
 button {
   font-size: 1.1rem;
+  width: 488px;
 }
 
-img {
-  object-fit: cover;
-  height: 100%;
-}
+// img {
+//   object-fit: cover;
+//   height: 100%;
+// }
 
 .input-group-text i {
   font-size: 1.25rem;
   width: 1.5rem;
   text-align: center;
-  color: #3358f4;
+  color:#8E89D0;
 }
 
 .input-group-text {
@@ -116,27 +117,148 @@ img {
   padding-left: 0;
   padding-right: 0;
   box-shadow: none;
-}
-
-.border-bottom-only:focus {
-  border-bottom-color: #ee7846;
-  outline: none;
-  box-shadow: none;
-}
-
-.btn-orange {
-  background-color: #ee7846;
-  color: #fff;
   border: none;
+  border-bottom: 1px solid #ccc;
 }
 
-.btn-orange:hover {
-  background-color: #d86a3f;
+// .border-bottom-only:focus {
+//   border-bottom-color: #ee7846;
+//   outline: none;
+//   box-shadow: none;
+// }
+
+// .btn-orange {
+//   background-color: #ee7846;
+//   color: #fff;
+//   border: none;
+// }
+
+// .btn-orange:hover {
+//   background-color: #d86a3f;
+// }
+
+// .text-orange {
+//   color: #5932EA;
+// }
+
+.form-field {
+  width: 488px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 8px; /* controls space between two fields */
 }
 
-.text-orange {
-  color: #d86a3f;
+.form-label {
+  font-weight: 500;
+  margin-bottom: 4px; /* ↓ reduce space between label and input */
+  
 }
+
+.custom-input {
+  width: 100%;
+  height: 40px;
+  padding: 6px 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.invalid-feedback {
+  color: red;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+// .card-infolist {
+//   height: 100px;
+//   width: 1500px;
+//   color: black;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 0 20px;
+//   font-family: Arial, sans-serif;
+// }
+.card-infolist .info-item {
+  display: flex;
+  flex-direction: row;       /* Ensures icon is on the LEFT */
+  align-items: flex-start;   /* Aligns icon with text */
+  gap: 12px;                 /* Adds spacing between icon and text */
+  // margin-bottom: 16px;       /* Space between each info block */
+}
+
+// .card-infolist .info-item img {
+//   width: 24px;
+//   height: 24px;
+//   object-fit: contain; 
+// }
+
+.card-infolist .info-text {
+  display: flex;
+  flex-direction: column; 
+}
+// .card-infolist {
+//   display: flex;
+//   flex-wrap: wrap;
+//   // gap: 100px;               /* Space between each info-item */
+//   justify-content: center; /* Center the info-items */
+//   align-items: center;     /* Align vertically (optional) */
+//   // margin: 40px auto;        /* Adds vertical gap and centers horizontally */
+//   padding: 20px;            /* Optional inner padding */
+//   max-width: fit-content;   /* Prevents full width stretch */
+//   margin: 10px auto 40px auto;
+//  }
+
+.card-infolist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-width: fit-content;
+  // margin-top: 0 !important;
+  margin: 0 auto 10px auto; /* No top gap */
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+.card-infolist h6,
+.card-infolist p {
+  margin: 0% !important; /* Reset default tag spacing */
+}
+
+
+.card-infolist .info-item img {
+  width: 45px;
+  height: 40px;
+  // object-fit: contain;
+  // margin-top: -20px; /* adjust value as needed */
+  }
+
+
+.card-infolist .info-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // gap: 10px;
+}
+
+
+.map-container {
+  width: 100%;
+  height: 300px; /* You can change height as needed */
+  // margin-top: 40px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.info-item {
+  font-size: 18px;
+}
+
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -149,17 +271,20 @@ img {
     font-weight: 700;
   }
 
-  .contact-info-container {
-    padding: 1.5rem;
-    text-align: center;
-    min-height: 500px;
-    margin: 5px 0px;
-    border-radius: 0px;
-  }
-
+//   .contact-info-container {
+//     padding: 1.5rem;
+//     text-align: center;
+//     min-height: 500px;
+//     margin: 5px 0px;
+//     border-radius: 0px;
+//     width: 100%;
+//   }
+// .contact-info-container img{
+//   width: 100% !important;
+// }
   .contact-details {
     font-size: 0.95rem;
-    margin-top: 50px;
+    // margin-top: 50px;
   }
 
   .contact-details i {
@@ -171,10 +296,136 @@ img {
     padding: 1rem;
   }
 
-  .right-contact {
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-    top: unset;
-  }
+  // .right-contact {
+  //   width: 100%;
+  //   max-width: 100%;
+  //   position: relative;
+  //   top: unset;
+  // }
 }
+
+// .contact-form {
+//   align-items: stretch; /* Makes both columns equal height */
+// }
+
+// .contact-info-container,
+.right-contact-form {
+  height: 100%;
+}
+
+
+/* Mobile-first base */
+// .contact-info-container {
+//   padding: 1.5rem;
+//   text-align: center;
+//   min-height: auto; /* remove fixed height on mobile */
+//   // margin: 1rem 0;
+//   border-radius: 0;
+//   height: auto;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+.right-contact-form {
+  padding: 1rem;
+  // margin: 1rem 0;
+  height: auto;
+  display: block;
+}
+
+// .right-contact {
+//   width: 100% !important;
+//   max-width: 100% !important;
+//   position: relative;
+//   top: unset;
+// }
+
+.form-field {
+  width: 100% !important; /* full width on mobile */
+  // margin-bottom: 1rem;
+}
+
+button {
+  width: 100% !important; /* full width submit button on mobile */
+  font-size: 1.1rem;
+  padding: 0.75rem;
+}
+.btn-clor{
+  background-color: #8E89D0;
+  border-color: #8783bb;
+}
+
+.card-infolist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem !important; /* smaller gap on mobile */
+  justify-content: flex-start;
+  // margin-top: 2rem;
+}
+
+.card-infolist .info-item {
+  flex: 1 1 100%; /* stack items vertically on mobile */
+  // margin-bottom: 1rem;
+}
+
+// .map-container {
+//   width: 100%;
+//   height: 300px; /* smaller map height on mobile */
+//   // margin-top: 2rem;
+//   border-radius: 8px;
+//   border: 2px solid #ccc;
+//   overflow: hidden;
+// }
+
+/* Optional: reduce padding and margin inside the form on mobile */
+// .right-contact form {
+//   padding: 0;
+//   margin: 0 auto;
+// }
+
+/* Override any fixed widths */
+input.custom-input,
+textarea.form-control {
+  width: 100% !important;
+}
+
+/* General fixes for input-group if any */
+.input-group {
+  flex-wrap: nowrap; /* keep inputs in one line */
+}
+
+/* On screens larger than 768px, keep your original styles */
+@media (min-width: 769px) {
+  // .contact-info-container {
+  //   min-height: 750px;
+  //   padding: 4rem 5rem;
+  //   border-radius: 0.5rem;
+  //   text-align: left;
+  // }
+
+  .form-field {
+    // width: 488px;
+    width: 100%;
+  }
+
+  button {
+    width: 488px;
+  }
+
+  .card-infolist {
+    gap: 300px;
+    flex-wrap: nowrap;
+  }
+
+  .card-infolist .info-item {
+    flex: none;
+    margin-bottom: 0;
+  }
+
+  // .map-container {
+  //   height: 317px;
+  //   width: 100%;
+  // }
+}
+

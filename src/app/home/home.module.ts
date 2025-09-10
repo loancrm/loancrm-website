@@ -19,6 +19,7 @@ import { CarouselModule } from 'primeng/carousel';
   ],
   exports:[
     HomeComponent
+  
   ]
 })
 export class HomeModule { }
