@@ -484,77 +484,96 @@
 // }
 
 /* Ensures the image scales correctly */
-.img-fluid {
-    max-width: 500%;  /* Image will not overflow */
-    height: auto;     /* Maintains aspect ratio */
-    margin:auto;   /* Center the image */
-    // justify-self: center;
-}
+// .img-fluid {
+//     max-width: 500%;  /* Image will not overflow */
+//     height: auto;     /* Maintains aspect ratio */
+//     margin:auto;   /* Center the image */
+//     // justify-self: center;
+// }
 
-/* Ensure proper space between text and image */
-.image-section {
-    padding-right: 20px; /* Space between image and text */
-}
+// /* Ensure proper space between text and image */
+// .image-section {
+//     padding-right: 20px; /* Space between image and text */
+// }
 
-.text-section {
-    padding-left: 20px;  /* Space between text and image */
-}
-.lead{
-  color: #686868;
-  font-size: 18px;
-  font-weight: 400px;
-}
+// .text-section {
+//     padding-left: 20px;  /* Space between text and image */
+// }
+// .lead{
+//   color: #686868;
+//   font-size: 18px;
+//   font-weight: 400px;
+// }
 
 /* Responsive Layout */
 /* Mobile View (max-width: 768px) */
-@media (max-width: 768px) {
-    /* Stack the content vertically */
-    .about-section, .reeee {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+// @media (max-width: 768px) {
+//     /* Stack the content vertically */
+//     .about-section, .reeee {
+//         flex-direction: column;
+//         align-items: center;
+//         text-align: center;
+//     }
 
-    /* Ensure images take up full width on mobile */
-    .img-fluid {
-        width: 100%;  /* Image takes full width of the container */
-        height: auto; /* Maintain aspect ratio */
-    }
+//     /* Ensure images take up full width on mobile */
+//     .img-fluid {
+//         width: 100%;  /* Image takes full width of the container */
+//         height: auto; /* Maintain aspect ratio */
+//     }
 
-    /* Adjust spacing between text and image */
-    .image-section, .text-section {
-        padding: 10px; /* Reduced padding for smaller screens */
-    }
+//     /* Adjust spacing between text and image */
+//     .image-section, .text-section {
+//         padding: 10px; /* Reduced padding for smaller screens */
+//     }
 
-    /* Adjust heading and paragraph font sizes for mobile */
-    .ra h2, .aa h2 {
-        font-size: 1.5rem; /* Slightly smaller heading */
-    }
+//     /* Adjust heading and paragraph font sizes for mobile */
+//     .ra h2, .aa h2 {
+//         font-size: 1.5rem; /* Slightly smaller heading */
+//     }
 
-    .ra p, .aa p {
-        font-size: 1rem;   /* Adjust paragraph size */
-        line-height: 1.6;  /* Better line height for readability */
-        margin: 10px 0;    /* Add margin for spacing */
-    }
+//     .ra p, .aa p {
+//         font-size: 1rem;   /* Adjust paragraph size */
+//         line-height: 1.6;  /* Better line height for readability */
+//         margin: 10px 0;    /* Add margin for spacing */
+//     }
 
-    /* Ensure both text and image are centered and stacked */
-    .ra, .aa {
-        padding: 15px;   /* Add padding to text sections */
-    }
+//     /* Ensure both text and image are centered and stacked */
+//     .ra, .aa {
+//         padding: 15px;   /* Add padding to text sections */
+//     }
 
-    /* Remove unnecessary gap in .r */
-    .r {
-        gap: 0;  /* Remove extra space between text and image */
-        justify-content: center; /* Center content */
-    }
+//     /* Remove unnecessary gap in .r */
+//     .r {
+//         gap: 0;  /* Remove extra space between text and image */
+//         justify-content: center; /* Center content */
+//     }
 
-    /* Remove any extra padding in the .image-section */
-    .image-section {
-        padding-right: 0; /* Remove right padding for mobile */
-    }
+//     /* Remove any extra padding in the .image-section */
+//     .image-section {
+//         padding-right: 0; /* Remove right padding for mobile */
+//     }
 
-    .lead {
-        font-size: 16px;  /* Adjust lead text size */
-        font-weight: 400; /* Ensure normal font weight */
-    }
+//     .lead {
+//         font-size: 16px;  /* Adjust lead text size */
+//         font-weight: 400; /* Ensure normal font weight */
+//     }
+// }
+
+.img-fluid {
+    // max-width: 500%;  /* Image will not overflow */
+    height: 318px;     /* Maintains aspect ratio */
+    // margin: 200px;   /* Center the image */
+    // justify-self: center;
+    width: 534px;
+}
+.img-flid{
+    height: 318px;
+    width: 534px;
+}
+.avggg{
+margin-top:80px !important;
+}
+    
+@media (max-width: 768px){
+    
 }

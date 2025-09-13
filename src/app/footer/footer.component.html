@@ -219,7 +219,37 @@
           <li><a routerLink="/home">Home</a></li>
           <li><a routerLink="/about">About Us</a></li>
           <li><a routerLink="/features">Features</a></li>
-          <li><a routerLink="/services">Services </a></li>
+          <li class="dropdown">
+          <li class="nav-item dropdown" dropdown>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/home']"
+ 
+                >CRM</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/hrm']"
+ 
+                >HRM</a
+              >
+            </li>
+          </ul>
+        
+          </li>
           <li><a routerLink="/contact">Contact Us</a></li>
         </ul>
       </div>

@@ -18,6 +18,7 @@ export class FooterComponent {
     this.subscribeForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]]
     });
+    
   }
   // subscribe() {
   //   if (this.email) {
@@ -27,7 +28,6 @@ export class FooterComponent {
   //     alert('Please enter a valid email address.');
   //   }
   // }
-
 
   onSubscribe(): void {
     if (this.subscribeForm.invalid) {

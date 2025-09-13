@@ -117,8 +117,8 @@ export class HomeComponent {
       open: false
     },
     {
-      question: 'Does it support CIBIL & API integrations?',
-      answer: 'Yes. You can integrate CIBIL, PAN, Aadhaar, GST, eNACH, and WhatsApp APIs.',
+      question: 'How much does it cost',
+      answer: 'Plans are flexible based on your users & integrations. Contact us for pricing.',
       open: false
     },
     {

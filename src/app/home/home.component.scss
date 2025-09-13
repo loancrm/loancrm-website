@@ -127,7 +127,8 @@ li img {
 input[type="radio"]:checked + .selectable-card {
   border: 4px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(167.2deg, #192AE5 0%, #476DCB 53.76%);
+  border: 4px solid #8e89d0;
+  // border-image-source: linear-gradient(167.2deg, #192AE5 0%, #476DCB 53.76%);
 }
 
 
@@ -205,14 +206,14 @@ input[type="radio"]:checked + .selectable-card {
 // }
 
 /* White blur/fade at the bottom */
-.homebanner::after {
+.pictuebanner::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;  /* adjust height */
-  // background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
+  height: 200px;  /* adjust height */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
   filter: blur(10px);
   z-index: 2;
   pointer-events: none;
@@ -1225,6 +1226,7 @@ h2 {
   .pricing-card {
     width: 100%;
     margin-bottom: 20px;
+    transition: border 0.3s ease;
   }
 
   h2 {
@@ -1303,9 +1305,10 @@ justify-self: center;
   
 }
 .freetrail{
-  background: #FAF9F7 !important;
+  // background: #47c017 !important;
   // background: #FAF9F7;
   // margin-top: 0 !important;
+  background: url('../../assets/images/Background Gradient (1).svg') !important;
 
 
 }
@@ -3072,7 +3075,7 @@ h6{
 .whycrm-heading {
   max-width: 1100px;
   margin: 40px auto;
-  padding: 30px;
+  // padding: 30px;
   // background-color: #f5f5f5;
   // border: 2px solid #ddd;
   // border-radius: 8px;
@@ -3510,7 +3513,7 @@ h6{
   .testimonial-card {
     width: auto !important;  /* take full carousel width */
     // max-width: 100%;         /* avoid overflow */
-    
+    // height: 100%;
   }
 }
 .p-carousel .p-carousel-item {
@@ -3900,9 +3903,9 @@ h6{
 //     height: auto;
 //   }
 
-.pictuebanner {
-  gap: 10px;
-}
+// .pictuebanner {
+//   gap: 10px;
+// }
 @media (max-width: 768px) {
   .pictuebanner {
     margin-left: 3px !important;
