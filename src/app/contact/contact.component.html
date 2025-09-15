@@ -1,140 +1,130 @@
 <!-- Heading Section -->
 <div class="contact-heading mb-2">
   <div class="container text-center p-2">
-    <h2> <b>Why <span style="color:#8E89D0;">MyLoanCrm</span></b></h2><br>
-    <p>MyLoanCRM is the simple-but-powerful loan management platform that removes manual <br>work,
-       closes more deals, and keeps your data secure — so you can focus <br> on closing loans, not
-       chasing paperwork.</p>
+    <h2>
+      <b>Why <span style="color: #8e89d0">MyLoanCrm</span></b>
+    </h2>
+    <br />
+    <p>
+      MyLoanCRM is the simple-but-powerful loan management platform that removes
+      manual <br />work, closes more deals, and keeps your data secure — so you
+      can focus <br />
+      on closing loans, not chasing paperwork.
+    </p>
   </div>
 </div>
 
 <!-- Contact Form Section -->
-<div
-  class="container  my-2 py-3  "
-> 
-  <div class="row   justify-content-center mb-4">
-    <div class=" col-md-6  ">
+<div class="container my-2 py-3">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-6">
       <!-- <div class="d-flex justify-content-center align-self-center"> -->
-        <img src="../../assets/Map.svg" alt="" width="100%" height="100%">
+      <img src="../../assets/Map.svg" alt="" width="100%" height="100%" />
       <!-- </div> -->
-      
-      </div>
+    </div>
 
-      <!-- Right Column: Contact Form -->
-      <div class="col-md-6 ">
-
-        <form
-          [formGroup]="contactForm"
-          class=" mx-5"
-          (ngSubmit)="onSubmit()"
-          novalidate
-        >
-          <div class="row mb-3 align-self-center">
-            <div class="form-field">
-          <label for="full_name" class="form-label">Full Name</label>
-          <input
-            id="full_name"
-            type="text"
-            pInputText
-            formControlName="full_name"
-            class="custom-input"
-          />
-          <div
-            class="invalid-feedback d-block"
-            *ngIf="contactForm.get('full_name')?.touched && contactForm.get('full_name')?.invalid"
-          >
-            Please enter your full name.
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6">
-          <div>
-            <label for="phone" class="form-label">Phone Number</label>
-
-            <!-- Country Dropdown and Phone Input on the same row -->
-            <div class="input-group">
-              <!-- Country Name Dropdown -->
-              <!-- <select
-                class="form-select"
-                formControlName="country"
-                style="max-width: 10px;"
-              >
-                <option value="">Select Country</option>
-                <option value="United States">🇺🇸 United States</option>
-                <option value="United Kingdom">🇬🇧 United Kingdom</option>
-                <option value="India">🇮🇳 India</option>
-                <option value="Australia">🇦🇺 Australia</option>
-                <option value="Canada">🇨🇦 Canada</option>
-                Add more countries -->
-              <!-- </select>  -->
-
-              <!-- Phone Number Input -->
-              <input
-                id="phone"
-                type="tel"
-                class="form-control"
-                pInputText
-                formControlName="phone"
-                placeholder="Enter phone number"
-              />
+    <!-- Right Column: Contact Form -->
+    <div class="col-md-6">
+      <form
+        [formGroup]="contactForm"
+        class="mx-5"
+        (ngSubmit)="onSubmit()"
+        novalidate
+      >
+        <div class="row mb-3 align-self-center">
+          <div class="form-field col-md-12">
+            <label for="full_name" class="form-label">Full Name</label>
+            <input
+              id="full_name"
+              type="text"
+              pInputText
+              formControlName="full_name"
+              placeholder="Enter Full Name"
+              class="custom-input"
+            />
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('full_name')?.touched &&
+                contactForm.get('full_name')?.invalid
+              "
+            >
+              Please enter your full name.
             </div>
           </div>
 
-          <div
-            class="invalid-feedback d-block"
-            *ngIf="
-              contactForm.get('phone')?.touched &&
-              contactForm.get('phone')?.invalid
-            "
-          >
-            Please enter a valid phone number.
-          </div>
-        </div>
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <div>
-                    <label for="email" class="form-label">Email </label>
-                    <input
-                      id="email"
-                      type="email"
-                      pInputText
-                      formControlName="email"
-                      class="form-control"
-                      placeholder="Enter your Email"
-                    />
-                    </div>
-                    <div
-                      class="invalid-feedback d-block"
-                      *ngIf="
-                        contactForm.get('email')?.touched &&
-                        contactForm.get('email')?.invalid
-                      "
-                    >
-                      Please provide a valid email address.
-                    </div>
-                  </div>
-                
-
-                </div>
-        <div class="form-field">
-          <label for="company_name" class="form-label">Company Name</label>
-          <input
-            id="company_name"
-            type="text"
-            pInputText
-            formControlName="company_name"
-            class="custom-input"
-          />
-          <div
-            class="invalid-feedback d-block"
-            *ngIf="contactForm.get('company_name')?.touched && contactForm.get('company_name')?.invalid"
-          >
-            Please enter your company name.
-          </div>
-        </div>
-          </div>
-
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <div>
+              <label for="phone" class="form-label">Phone Number</label>
+
+              <div class="input-group">
+                <input
+                  id="phone"
+                  type="tel"
+                  class="form-control"
+                  pInputText
+                  formControlName="phone"
+                  placeholder="Enter phone number"
+                />
+              </div>
+            </div>
+
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('phone')?.touched &&
+                contactForm.get('phone')?.invalid
+              "
+            >
+              Please enter a valid phone number.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3 mb-md-0">
+            <div>
+              <label for="email" class="form-label">Email </label>
+              <input
+                id="email"
+                type="email"
+                pInputText
+                formControlName="email"
+                class="form-control"
+                placeholder="Enter your Email"
+              />
+            </div>
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('email')?.touched &&
+                contactForm.get('email')?.invalid
+              "
+            >
+              Please provide a valid email address.
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="company_name" class="form-label">Company Name</label>
+            <input
+              id="company_name"
+              type="text"
+              pInputText
+              formControlName="company_name"
+              class="custom-input"
+            />
+            <div
+              class="invalid-feedback d-block"
+              *ngIf="
+                contactForm.get('company_name')?.touched &&
+                contactForm.get('company_name')?.invalid
+              "
+            >
+              Please enter your company name.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div>
             <label for="message" class="form-label">Message</label>
             <textarea
               id="message"
@@ -143,66 +133,71 @@
               formControlName="message"
               class="form-control full-border-textarea"
             ></textarea>
-            </div>
-            <div
-              class="invalid-feedback d-block"
-              *ngIf="
-                contactForm.get('message')?.touched &&
-                contactForm.get('message')?.invalid
-              "
-            >
-              Please write your message.
-            </div>
           </div>
+          <div
+            class="invalid-feedback d-block"
+            *ngIf="
+              contactForm.get('message')?.touched &&
+              contactForm.get('message')?.invalid
+            "
+          >
+            Please write your message.
+          </div>
+        </div>
 
-          <div class="text-left mt-4">
-            <button
-              type="submit"
-              pButton
-              [label]="loading ? 'Sending...' : 'Send Message'"
-              [disabled]="loading"
-              class="px-4 py-2 btn-clor"
-              iconPos="left"
-              [icon]="loading ? 'pi pi-spin pi-spinner' : ''"
-            ></button>
-          </div>
-        </form>
-      </div>
+        <div class="text-left mt-4">
+          <button
+            type="submit"
+            pButton
+            [label]="loading ? 'Sending...' : 'Send Message'"
+            [disabled]="loading"
+            class="px-4 py-2 btn-clor"
+            iconPos="left"
+            [icon]="loading ? 'pi pi-spin pi-spinner' : ''"
+          ></button>
+        </div>
+      </form>
+    </div>
   </div>
   <div class="card-infolist my-3">
-  <!-- Phone -->
-  <div class="info-item">
-    <img src="../../assets/images/phone.svg" alt="Phone Icon" />
-    <div class="info-text">
-      <h6><b>Phone Number</b></h6>
-      <a style="text-decoration: none;" href="tel:+91 81792 78882"><p style="color:#8E89D0;">+91 81792 78882</p></a>
-
+    <!-- Phone -->
+    <div class="info-item">
+      <img src="../../assets/images/phone.svg" alt="Phone Icon" />
+      <div class="info-text">
+        <h6><b>Phone Number</b></h6>
+        <a style="text-decoration: none" href="tel:+91 81792 78882"
+          ><p style="color: #8e89d0">+91 81792 78882</p></a
+        >
+      </div>
+    </div>
+    <br />
+    <!-- Location -->
+    <div class="info-item">
+      <img src="../../assets/images/location.svg" alt="Location Icon" />
+      <div class="info-text">
+        <h6><b>Location</b></h6>
+        <p style="color: #8e89d0">Begumpet, Hyderabad</p>
+        <!-- <p>Visit us at <a href="https://www.google.com/maps?q=Begumpet,Hyderabad" target="_blank">Begumpet, Hyderabad</a>.</p> -->
+      </div>
+    </div>
+    <br />
+    <!-- Email -->
+    <div class="info-item">
+      <img src="../../assets/images/email.svg" alt="Email Icon" />
+      <div class="info-text">
+        <h6><b>Email</b></h6>
+        <a
+          style="text-decoration: none"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@myloancrm.com&su=Subject&body=Body%20Text"
+          target="_blank"
+        >
+          <p style="color: #8e89d0">connect&#64;myloancrm.com</p></a
+        >
+      </div>
     </div>
   </div>
-<br>
-  <!-- Location -->
-  <div class="info-item">
-    <img src="../../assets/images/location.svg" alt="Location Icon" />
-    <div class="info-text">
-      <h6><b>Location</b></h6>
-      <p style="color:#8E89D0;">Begumpet, Hyderabad</p>
-      <!-- <p>Visit us at <a href="https://www.google.com/maps?q=Begumpet,Hyderabad" target="_blank">Begumpet, Hyderabad</a>.</p> -->
-
-    </div>
-  </div>
-<br>
-  <!-- Email -->
-  <div class="info-item">
-    <img src="../../assets/images/email.svg" alt="Email Icon" />
-    <div class="info-text">
-      <h6><b>Email</b></h6>
-       <a style="text-decoration: none;" href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@myloancrm.com&su=Subject&body=Body%20Text" target="_blank">
-       <p style="color: #8E89D0;">connect&#64;myloancrm.com</p></a>
-    </div>
-  </div>
-</div>
-<div class="map-container">
-  <!-- <iframe
+  <div class="map-container">
+    <!-- <iframe
     src="https://www.google.com/maps?q=405,+4th+Floor,+Sapthagiri+Towers,+Begumpet,+Hyderabad+–+500016&output=embed"
     width="100%"
     height="290px"
@@ -211,8 +206,16 @@
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade">
 </iframe> -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3197540650544!2d78.4628151!3d17.444403299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xac7bf86542e6c73%3A0x6165f9829f727a63!2sMyLoanCRM!5e0!3m2!1sen!2sin!4v1757487333068!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <!-- <iframe
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3197540650544!2d78.4628151!3d17.444403299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xac7bf86542e6c73%3A0x6165f9829f727a63!2sMyLoanCRM!5e0!3m2!1sen!2sin!4v1757487333068!5m2!1sen!2sin"
+      width="100%"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <!-- <iframe
     src="https://www.google.com/maps?q=405, 4th Floor, Sapthagiri Towers, Begumpet, Hyderabad – 500016&output=embed
 "
     width="100%"
@@ -222,5 +225,5 @@
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"
   ></iframe> -->
-</div>
+  </div>
 </div>

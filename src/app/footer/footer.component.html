@@ -108,11 +108,11 @@
 <div class="sticky-cta">
   <button class="btn btn-primary">Schedule a Call</button>
 </div> -->
- <!-- <div class="subscription-container">
+<!-- <div class="subscription-container">
   <h2 class="newsletter-heading" style=" display: flex; flex-direction: column;  justify-content: center; align-items: center;">
     Subscribe to Our Newsletter</h2>
   <div class="subscription-content">
-  
+
 
     <form [formGroup]="subscribeForm" (ngSubmit)="onSubscribe()" novalidate>
       <div class="form-wrapper">
@@ -134,12 +134,10 @@
   </div>
 </div> -->
 
-
-
-<footer class="site-footer" style="background-color: #F7F7F7;">
+<footer class="site-footer" style="background-color: #f7f7f7">
   <div class="subscription-container">
-  <h4>Subscribe to our newsletter</h4>
-  <br>
+    <h4>Subscribe to our newsletter</h4>
+    <br />
     <form [formGroup]="subscribeForm" (ngSubmit)="onSubscribe()" novalidate>
       <div class="form-wrapper">
         <input
@@ -153,12 +151,11 @@
           [disabled]="loading || subscribeForm.invalid"
           class="btn newsletter-button"
         >
-          {{ loading ? 'Subscribing...' : 'Subscribe' }}
+          {{ loading ? "Subscribing..." : "Subscribe" }}
         </button>
       </div>
     </form>
-  
-</div>
+  </div>
   <!-- Newsletter Section at Top -->
   <div class="newsletter-wrapper">
     <!-- <div class="card" style="background-image: url('../../assets/images/BG\ \(1\).svg'); width: 800px; height: 100px;">
@@ -171,7 +168,7 @@
             class="form-control newsletter-input me-2"
             placeholder="Enter your email"
           />
-          
+
           <button
             type="submit"
             [disabled]="loading || subscribeForm.invalid"
@@ -185,70 +182,65 @@
     </div>
 
     </div> -->
-   
-
   </div>
 
   <!-- Main Footer Content -->
   <div class="container">
     <div class="footer-grid">
-
-        <!-- <h3 class="text-uppercase fw-bold mb-2">MyLoanCRM</h3> -->
-         <!-- <img
+      <!-- <h3 class="text-uppercase fw-bold mb-2">MyLoanCRM</h3> -->
+      <!-- <img
           src="../../assets/images/updatedlogo.png"
           alt="MyLoanCRM" class="footer-logo"
         /> -->
-      <div class="" >
+      <div class="">
         <div>
           <img
-          src="../../assets/images/updatedlogo.png"
-          alt="MyLoanCRM" class="footer-logo"
-        />
+            src="../../assets/images/updatedlogo.png"
+            alt="MyLoanCRM"
+            class="footer-logo"
+          />
         </div>
-          <div class="socialicons">
-          <a href="https://www.instagram.com/my_loan_crm?igsh=Nno3aWV4b2NiOW9r"><img src="../../assets/images/insta.svg"></a>
-          <a href="https://x.com/Myloancrm"><img src="../../assets/images/social xmedi.svg" alt=""></a>
-          <a href="https://www.facebook.com/profile.php?id=61580323859697"><img src="../../assets/images/facebook.svg" alt=""></a>
-          <a href="https://www.youtube.com/@myloancrm"><img src="../../assets/images/youtube.svg" alt=""></a>
+        <div class="socialicons mt-2">
+          <a href="https://www.instagram.com/my_loan_crm?igsh=Nno3aWV4b2NiOW9r"
+            ><img src="../../assets/images/insta.svg"
+          /></a>
+          <a href="https://x.com/Myloancrm"
+            ><img src="../../assets/images/social xmedi.svg" alt=""
+          /></a>
+          <a href="https://www.facebook.com/profile.php?id=61580323859697"
+            ><img src="../../assets/images/facebook.svg" alt=""
+          /></a>
+          <a href="https://www.youtube.com/@myloancrm"
+            ><img src="../../assets/images/youtube.svg" alt=""
+          /></a>
         </div>
       </div>
 
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/">Home</a></li>
           <li><a routerLink="/about">About Us</a></li>
           <li><a routerLink="/features">Features</a></li>
-          <li class="dropdown">
+          <li class="dropdown"></li>
           <li class="nav-item dropdown" dropdown>
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Products
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a
-                class="dropdown-item"
-                [routerLink]="['/home']"
- 
-                >CRM</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                [routerLink]="['/hrm']"
- 
-                >HRM</a
-              >
-            </li>
-          </ul>
-        
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" [routerLink]="['/']">CRM</a>
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/hrm']">HRM</a>
+              </li>
+            </ul>
           </li>
           <li><a routerLink="/contact">Contact Us</a></li>
         </ul>
@@ -265,7 +257,7 @@
         <h4>Contact Us</h4>
         <div class="contact-info">
           <p class="mb-1">
-            <i class="text-white"></i> 
+            <i class="text-white"></i>
             +91 81792 78882
           </p>
           <p>

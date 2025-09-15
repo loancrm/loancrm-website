@@ -37,7 +37,7 @@ nav {
   // // padding: 50px;
   // margin-left:20px !important;
   transition: background-color 0.3s, color 0.3s;
-  border-radius: 8px;  
+  border-radius: 8px;
 }
 // .navbar-nav{
 //   margin-left: 100px !important;
@@ -224,7 +224,6 @@ nav {
   .navbar {
     padding: 0.5rem 1rem !important;
     border-radius: 0%;
- 
   }
 
   .container-fluid {
@@ -232,8 +231,6 @@ nav {
     justify-content: space-between; /* Logo left, menu right */
     align-items: center;
 
-    
-    
   }
 
   .navbar-brand img {
@@ -254,7 +251,7 @@ nav {
   .raj {
     width: 100% !important;
     margin: 0 !important;
-    
+
   }
   .navbar-nav{
     background-color:white !important;
@@ -278,7 +275,7 @@ nav {
   transition: all 0.4s ease;
 //  margin-left: 206px;
   // box-shadow: 0 8px 20px rgba(29, 140, 248, 0.4);
-  
+
 }
 
 
@@ -309,4 +306,8 @@ nav {
   .nav-item.dropdown .dropdown-menu {
     transition: all 0.3s ease;
   }
+}
+.dropdown-menu .dropdown-item:hover {
+  color: #8E89D0 !important; /* Change to your preferred color */
+  background-color: transparent !important; /* Prevent background change */
 }

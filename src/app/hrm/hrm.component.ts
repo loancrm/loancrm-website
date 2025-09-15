@@ -10,6 +10,6 @@ export class HrmComponent {
  constructor(private router: Router) {}
 
  goToPricing(): void {
-   this.router.navigate(['/home'], { state: { scrollToPricing: true}});
+   this.router.navigate(['/'], { state: { scrollToPricing: true}});
  }
 }

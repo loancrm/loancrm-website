@@ -8,25 +8,39 @@ import { FeaturesComponent } from './features/features.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 import { HrmComponent } from './hrm/hrm.component';
 
+
+// const routes: Routes = [
+//   { path: '', redirectTo: '/home', pathMatch: 'full' },
+//   { path: 'home', component: HomeComponent }, // default route
+//   { path: 'about', component: AboutComponent },
+//   { path: 'features', component: FeaturesComponent },
+//   { path: 'contact', component: ContactComponent },
+//   { path: 'terms-of-service', component: TermsandconditionsComponent },
+//   {path:'hrm', component: HrmComponent},
+
+//   // { path: 'pricing', component: PricingComponent },
+
+// ];
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent }, // default route
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  // { path: '', component: HomeComponent }, // default route
   { path: 'about', component: AboutComponent },
   { path: 'features', component: FeaturesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'terms-of-service', component: TermsandconditionsComponent },
-  {path:'hrm', component: HrmComponent},
+  { path: 'hrm', component: HrmComponent },
+  { path: '**', redirectTo: '' }
 
   // { path: 'pricing', component: PricingComponent },
 
 ];
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled', // scrolls to top on route change
-   onSameUrlNavigation: 'reload',
+  onSameUrlNavigation: 'reload',
   anchorScrolling: 'enabled', // optional: enables anchor scrolling
 };
 @NgModule({
-  imports: [RouterModule.forRoot(routes,routerOptions)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
