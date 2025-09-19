@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { FeaturesComponent } from './features/features.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 import { HrmComponent } from './hrm/hrm.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 
 // const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'features', component: FeaturesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'terms-of-service', component: TermsandconditionsComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'hrm', component: HrmComponent },
   { path: '**', redirectTo: '' }
 
